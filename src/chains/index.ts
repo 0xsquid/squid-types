@@ -2,7 +2,7 @@ import { BridgeConfig } from "bridges";
 
 export enum ChainType {
   EVM = "evm",
-  COSMOS = "cosmos",
+  COSMOS = "cosmos2",
 }
 
 export type BaseChain = {
