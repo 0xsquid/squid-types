@@ -1,0 +1,42 @@
+name: Squid Types Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: Release Squid Types package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Authenticate with private NPM package
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Install dependencies
+        run: |
+          yarn install
+          yarn build
+
+      - name: Setup git profile
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Publish to NPM
+        id: publish
+        uses: JS-DevTools/npm-publish@v2
+        if: ${{ github.event.inputs.npm-release == 'true' }}
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: "./package.json"
+          dry-run: ${{ github.event.inputs.dry-run }}
+
+      - if: ${{ github.event.inputs.npm-release == 'true' && steps.publish.outputs.type != 'none' && github.event.inputs.dry-run == 'false'}}
+        run: |
+          echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
