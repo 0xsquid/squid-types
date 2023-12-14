@@ -1,5 +1,3 @@
-import { Token } from "../tokens";
-
 export enum WrapperType {
   WRAPPED_NATIVE = "WrappedNative",
   OVERNIGHT = "Overnight",

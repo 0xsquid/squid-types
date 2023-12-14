@@ -1,24 +1,13 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "alwaysStrict": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "composite": true,
-    "lib": ["esnext"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noImplicitThis": true,
     "outDir": "dist",
-    "skipLibCheck": true,
-    "strict": true,
-    "strictNullChecks": true,
     "target": "es6",
     "baseUrl": "./src",
-    "sourceMap": true,
-    "declaration": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true
+    "noImplicitAny": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts"],
   "paths": {

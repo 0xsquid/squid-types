@@ -2,7 +2,7 @@ import { ChainData, ChainType } from "../chains";
 import { Dex, DexName } from "../dexes";
 import { FeeCost, GasCost } from "../fees";
 import { QuoteAction } from "../quote";
-import { ChainCall, EvmContractCall, SlippageMode, SquidData } from "../squid";
+import { ChainCall, SlippageMode, SquidData } from "../squid";
 import { Token } from "../tokens";
 import { WrapDirection, WrapperType } from "../wrappers";
 import { BridgeType } from "../bridges";

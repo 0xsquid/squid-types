@@ -12,6 +12,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+.yarnrc
 
 # local env files
 .env
@@ -19,3 +20,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+prettier
