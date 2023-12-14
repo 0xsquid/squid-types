@@ -1,33 +1,14 @@
 name: Linter and build
-
-on:
-  push:
-  pull_request:
-    types: [ready_for_review, synchronize, opened]
-    branches: ["main", "develop"]
-
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
 jobs:
-  types:
-    name: Types validation
+  check-bats-version:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
-      - uses: actions/checkout@v3
-        name: Use Node.js 18.x
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: 18.x
-          cache: "yarn"
-      - name: Install dependencies
-        run: |
-          yarn install
-      - name: Build
-        run: |
-          yarn build
-      - name: Run linter
-        run: |
-          yarn lint
+          node-version: "18"
+      - run: yarn install
+      - run: yarn build
+      - run: yarn lint
