@@ -6,7 +6,7 @@ module.exports = {
   env: {
     node: true,
   },
-  ignorePatterns: ["dist"],
+  ignorePatterns: ["dist", "src/**/*spec.ts", "src/**/*test.ts"],
   rules: {
     "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",

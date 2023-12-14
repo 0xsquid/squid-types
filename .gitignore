@@ -1,10 +1,11 @@
-
+# IDE
+.idea
 .vscode
 
 # dependencies
 node_modules
 
-# misc
+# build
 dist
 
 # debug
