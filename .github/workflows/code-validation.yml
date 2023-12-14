@@ -1,8 +1,7 @@
 name: Linter and build
-run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-bats-version:
+  squid-type:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
