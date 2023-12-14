@@ -72,11 +72,6 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     },
-    "git": {
-      "tagName": "squid-types-v${version}",
-      "pushRepo": "https://github.com/0xsquid/squid-types.git",
-      "commitMessage": "chore: branch cut release for squid-types v${version}"
-    },
     "npm": {
       "publish": false
     }
