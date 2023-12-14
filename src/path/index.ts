@@ -1,0 +1,76 @@
+import { Dex, DexName } from "../dexes";
+import { ChainData, ChainType } from "../chains";
+import { ActionType } from "../routes";
+import { Token } from "../tokens";
+import { WrapperType } from "wrappers";
+import { BridgeType } from "bridges";
+
+export interface PathInternal {
+  fromChain: string;
+  fromToken: string;
+  toChain: string;
+  toToken: string;
+  actions: PathActionInternal[];
+}
+
+export interface Path {
+  fromChain: ChainData;
+  fromToken: Token;
+  toChain: ChainData;
+  toToken: Token;
+  actions: PathAction[];
+}
+
+export interface PathActionInternal {
+  type: ActionType;
+  chainType: ChainType;
+  fromChainId: string;
+  toChainId: string;
+  fromToken: string;
+  toToken: string;
+  data: Record<string, any>;
+}
+
+export interface ActionBaseData {
+  dex: DexName | Dex;
+  chainId: string;
+  slippage: number;
+  path: string[];
+  custom: Record<string, any>;
+  type: WrapperType | BridgeType;
+
+  // pools
+  poolFee: number;
+  poolId: string;
+  isStable: boolean;
+  exchangeId?: string;
+  exchangeProvider?: string;
+
+  // wrappers
+  address: string;
+  wrapper: string;
+  coinAddresses: string[];
+
+  // bridges
+  name: string;
+  provider: string;
+}
+
+export interface PathAction {
+  type: ActionType;
+  chainType: ChainType;
+  fromChain: ChainData;
+  toChain: ChainData;
+  fromToken: Token;
+  toToken: Token;
+  data: ActionBaseData;
+}
+
+export interface PathParams {
+  fromChainId: string;
+  toChainId: string;
+  fromToken: Pick<Token, "type" | "chainId" | "name" | "symbol" | "decimals" | "address">;
+  toToken: Pick<Token, "type" | "chainId" | "name" | "symbol" | "decimals" | "address">;
+  maxResults?: number;
+  subgraphIds?: string[];
+}

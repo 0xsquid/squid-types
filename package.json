@@ -1,0 +1,75 @@
+{
+  "name": "@0xsquid/squid-types",
+  "version": "0.1.",
+  "description": "JS and TS types relating to 0xsquid related projects.",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "format": "prettier --write --loglevel warn \"./src/**/*.ts\"",
+    "clean": "rimraf dist tsconfig.tsbuildinfo",
+    "clean:all": "rimraf dist tsconfig.tsbuildinfo node_modules",
+    "prepare": "yarn build",
+    "build": "tsc",
+    "release": "release-it",
+    "release:pre": "release-it --preRelease=beta",
+    "release:ci": "release-it --ci",
+    "release:dry": "release-it --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xsquid/squid-core.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "typescript",
+    "types",
+    "0xsquid",
+    "squidrouter"
+  ],
+  "author": "0xsquid",
+  "license": "Apache-2.0",
+  "directories": {
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0"
+  },
+  "peerDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "release-it": {
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "conventionalcommits",
+        "infile": "CHANGELOG.md"
+      }
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    },
+    "git": {
+      "tagName": "squid-types-v${version}",
+      "pushRepo": "https://github.com/0xsquid/squid-core.git",
+      "commitMessage": "chore: branch cut release for squid-types v${version}"
+    },
+    "npm": {
+      "publish": false
+    }
+  },
+  "dependencies": {
+    "@axelar-network/axelarjs-sdk": "^0.13.6",
+    "@ethersproject/providers": "^5.7.2",
+    "typescript": "^5.3.2"
+  }
+}

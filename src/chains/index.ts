@@ -1,0 +1,233 @@
+import { BridgeConfig } from "bridges";
+
+export enum ChainType {
+  EVM = "evm",
+  COSMOS = "cosmos",
+}
+
+export type BaseChain = {
+  chainId: string;
+  chainType: ChainType;
+  axelarChainName: ChainName;
+  networkIdentifier: NetworkIdentifier;
+  networkName: string;
+  rpc: string;
+  internalRpc: string;
+  chainIconURI: string;
+  blockExplorerUrls: string[];
+  enableBoostByDefault: boolean;
+  estimatedRouteDuration: number;
+  estimatedBoostRouteDuration: number;
+  swapAmountForGas: string;
+  sameChainSwapsSupported: boolean;
+  nativeCurrency: {
+    name: string;
+    symbol: string;
+    decimals: number;
+    icon: string;
+  };
+  squidContracts: {
+    defaultCrosschainToken: string;
+    squidRouter?: string;
+    squidMulticall?: string;
+    squidFeeCollector?: string;
+  };
+  bridges: {
+    [key: string]: BridgeConfig;
+  };
+};
+
+export type EvmChain = BaseChain & {
+  chainNativeContracts: {
+    wrappedNativeToken: string;
+    ensRegistry: string;
+    multicall: string;
+    usdcToken: string;
+  };
+  gas?: {
+    lastBaseFeePerGas: string;
+    maxFeePerGas: string;
+    maxPriorityFeePerGas: string;
+    gasPrice: string;
+  };
+};
+
+export type CosmosChain = BaseChain & {
+  rest: string;
+  stakeCurrency: CosmosCurrency;
+  walletUrl?: string;
+  walletUrlForStaking?: string;
+  bip44: BIP44;
+  alternativeBIP44s?: BIP44[];
+  bech32Config: Bech32Config;
+  currencies: CosmosCurrency[];
+  feeCurrencies: CosmosCurrency[];
+  coinType?: number;
+  features?: string[];
+  gasPriceStep?: CosmosGasType;
+  chainToAxelarChannelId: string;
+};
+
+export type CosmosCurrency = {
+  coinDenom: string;
+  coinMinimalDenom: string;
+  coinDecimals: number;
+  coingeckoId?: string;
+  gasPriceStep?: CosmosGasType;
+};
+
+export type BIP44 = {
+  coinType: number;
+};
+
+export type Bech32Config = {
+  bech32PrefixAccAddr: string;
+  bech32PrefixAccPub: string;
+  bech32PrefixValAddr: string;
+  bech32PrefixValPub: string;
+  bech32PrefixConsAddr: string;
+  bech32PrefixConsPub: string;
+};
+
+export type CosmosGasType = {
+  low: number;
+  average: number;
+  high: number;
+};
+
+export type ChainData = EvmChain | CosmosChain;
+
+export enum ChainName {
+  ARBITRUM = "Arbitrum",
+  ARBITRUM2 = "arbitrum", //testnet
+  AURORA = "aurora",
+  AVALANCHE = "Avalanche",
+  BASE = "base",
+  BINANCE = "binance",
+  CELO = "celo",
+  CENTRIFUGE = "centrifuge",
+  ETHEREUM = "Ethereum",
+  ETHEREUM2 = "Ethereum-2", //testnet
+  FANTOM = "Fantom",
+  FILECOIN = "filecoin",
+  FILECOIN2 = "filecoin-2", //testnet
+  KAVA = "kava",
+  MANTLE = "mantle",
+  MOONBEAM = "Moonbeam",
+  OPTIMISM = "optimism",
+  POLYGON_ZKEVM = "polygon-zkevm",
+  POLYGON = "Polygon",
+  LINEA = "linea",
+  SCROLL = "scroll",
+
+  // Cosmos
+  AGORIC = "agoric",
+  ASSETMANTLE = "assetmantle",
+  AURA = "aura",
+  AXELARNET = "axelarnet",
+  CARBON = "carbon",
+  COMDEX = "comdex",
+  COSMOS = "cosmoshub",
+  CRESCENT = "crescent",
+  EMONEY = "e-money",
+  EVMOS = "evmos",
+  FETCH = "fetch",
+  INJECTIVE = "injective",
+  JUNO = "juno",
+  KI = "ki",
+  KUJIRA = "kujira",
+  NOBLE = "noble",
+  OSMOSIS = "osmosis",
+  OSMOSIS5 = "osmosis-5", //testnet
+  REGEN = "regen",
+  SEI = "sei",
+  SECRET = "secret", //deprecated
+  SECRETSNIP = "secret-snip",
+  STARGAZE = "stargaze",
+  STRIDE = "stride",
+  TERRA2 = "terra-2",
+  UMEE = "umee",
+}
+
+export enum NetworkIdentifier {
+  // EVM
+  ETHEREUM = "Ethereum",
+  AVALANCHE = "Avalanche",
+  ARBITRUM = "Arbitrum",
+  AURORA = "Aurora",
+  BASE = "Base",
+  BINANCE = "Binance",
+  CELO = "Celo",
+  FANTOM = "Fantom",
+  FILECOIN = "Filecoin",
+  KAVA = "Kava",
+  MANTLE = "Mantle",
+  MOONBEAM = "Moonbeam",
+  OPTIMISM = "Optimism",
+  POLYGON = "Polygon",
+  LINEA = "Linea",
+  SCROLL = "Scroll",
+
+  // COSMOS
+  AGORIC = "agoric",
+  ASSETMANTLE = "assetmantle",
+  AURA = "Aura",
+  AXELAR = "Axelar",
+  AXELARNET = "Axelarnet",
+  CARBON = "Carbon",
+  COMDEX = "Comdex",
+  COSMOS = "Cosmoshub",
+  CRESCENT = "Crescent",
+  EMONEY = "E-money",
+  EVMOS = "Evmos",
+  FETCH = "Fetch",
+  INJECTIVE = "Injective",
+  JUNO = "Juno",
+  KI = "Ki",
+  KUJIRA = "Kujira",
+  NOBLE = "Noble",
+  OSMOSIS = "Osmosis",
+  REGEN = "Regen",
+  SEI = "Sei",
+  SECRET = "Secret", //deprecated
+  SECRETSNIP = "Secret-snip",
+  STARGAZE = "Stargaze",
+  STRIDE = "Stride",
+  TERRA2 = "Terra-2",
+  UMEE = "Umee",
+}
+
+export type ChainIBCInfo = {
+  chain_id: string;
+  client_id: string;
+  connection_id: string;
+};
+
+export type Channel = {
+  chain_1: {
+    channel_id: string;
+    port_id: string;
+  };
+  chain_2: {
+    channel_id: string;
+    port_id: string;
+  };
+  ordering: string;
+  version: string;
+  tags: {
+    status: string;
+    preferred?: boolean;
+    dex?: string;
+  };
+};
+
+export type IbcData = {
+  chain_1: ChainIBCInfo;
+  chain_2: ChainIBCInfo;
+  channels: Channel[];
+};
+
+export enum CosmosChainFeatures {
+  PACKET_FORWARD_MIDDLEWARE = "packet-forward-middleware",
+  COSMWASM = "cosmwasm",
+}
