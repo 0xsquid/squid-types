@@ -23,18 +23,12 @@ jobs:
           yarn install
           yarn build
 
-      - name: Setup git profile
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
       - name: Publish to NPM
         id: publish
         uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: "./package.json"
-          dry-run: ${{ github.event.inputs.dry-run }}
 
       - if: ${{ steps.publish.outputs.type != 'none' }}
         run: |
