@@ -1,0 +1,13 @@
+name: Linter and build
+on: [push]
+jobs:
+  squid-type:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - run: yarn install
+      - run: yarn build
+      - run: yarn lint
