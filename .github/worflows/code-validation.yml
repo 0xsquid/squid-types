@@ -1,33 +1,87 @@
-name: Linter and build
+name: Unit Tests
 
 on:
   push:
   pull_request:
     types: [ready_for_review, synchronize, opened]
-    branches: ["main", "develop"]
+    branches: ["main"]
+
+env:
+  COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+  GRAPH_URI: ${{ vars.GRAPH_URI }}
+  GRAPH_USER: ${{ vars.GRAPH_USER }}
+  GRAPH_PASS: ${{ secrets.GRAPH_PASS }}
+  GRAPH_NAME: ""
 
 jobs:
-  types:
-    name: Types validation
+  api:
+    name: Core API
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/checkout@v3
+      - id: skip_check
+        uses: fkirc/skip-duplicate-actions@v5
+        with:
+          skip_after_successful_duplicate: "true"
+          concurrent_skipping: "same_content_newer"
+          paths: '["packages/api/**/*"]'
+          paths_ignore: '["packages/pathfinder/**/*", ".github/*", ".devcointainer/*"]'
+      - if: ${{ steps.skip_check.outputs.should_skip  != 'true' }}
+        uses: actions/checkout@v3
         name: Use Node.js 16.x
-      - uses: actions/setup-node@v3
+      - if: ${{ steps.skip_check.outputs.should_skip  != 'true' }}
+        uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: "yarn"
-      - name: Install dependencies
+      - if: ${{ steps.skip_check.outputs.should_skip  != 'true' }}
+        name: Authenticate with private NPM package
         run: |
-          yarn install
-      - name: Build
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      - if: ${{ steps.skip_check.outputs.should_skip  != 'true' }}
+        name: Install dependencies
         run: |
-          yarn build
-      - name: Run linter
+          yarn install --immutable --immutable-cache --check-cache --network-concurrency 1
+      - if: ${{ steps.skip_check.outputs.should_skip  != 'true' }}
+        name: Run tests
         run: |
-          yarn lint
+          yarn workspace @0xsquid/api test
+
+  pathfinder:
+    name: PathService API
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - id: skip_check
+        uses: fkirc/skip-duplicate-actions@v5
+        with:
+          skip_after_successful_duplicate: "true"
+          concurrent_skipping: "same_content_newer"
+          paths: '["packages/pathfinder/**/*"]'
+          paths_ignore: '["packages/api/**/*", "packages/config/**/*", "packages/types/**/*", ".github/*", ".devcointainer/*"]'
+      - if: ${{ steps.skip_check.outputs.should_skip  != 'true' }}
+        uses: actions/checkout@v3
+        name: Use Node.js 16.x
+      - if: ${{ steps.skip_check.outputs.should_skip  != 'true' }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: "yarn"
+      - if: ${{ steps.skip_check.outputs.should_skip  != 'true' }}
+        name: Install dependencies
+        run: |
+          yarn install --immutable --immutable-cache --check-cache --network-concurrency 1
+      - if: ${{ steps.skip_check.outputs.should_skip  != 'true' }}
+        name: Run tests
+        run: |
+          yarn workspace @0xsquid/pathfinder test
