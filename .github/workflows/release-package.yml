@@ -31,7 +31,6 @@ jobs:
       - name: Publish to NPM
         id: publish
         uses: JS-DevTools/npm-publish@v2
-        if: ${{ github.event.inputs.npm-release == 'true' }}
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: "./package.json"
