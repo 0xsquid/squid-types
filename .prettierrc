@@ -7,21 +7,5 @@
   "singleQuote": false,
   "tabWidth": 2,
   "trailingComma": "all",
-  "useTabs": false,
-  "overrides": [
-    {
-      "files": "*.sol",
-      "options": {
-        "printWidth": 120,
-        "tabWidth": 4,
-        "bracketSpacing": false
-      }
-    },
-    {
-      "files": "*.md",
-      "options": {
-        "printWidth": 120
-      }
-    }
-  ]
+  "useTabs": false
 }
