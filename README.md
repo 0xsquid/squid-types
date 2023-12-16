@@ -1,10 +1,10 @@
 # Squid Types
 
-Squid types used on the graph, api and sdk.
+Squid types used on the data feed, pathfinder api and sdk.
 
 ### LINTER & PRETTIER
 
-This project has installed prettier and linter rules, with husky we ensure pre-commit and pre-push validation.
+This project has [Prettier](https://prettier.io/docs/en/) and [ESLint](https://eslint.org/docs/latest/) linter rules installed. With [Husky](https://typicode.github.io/husky/) we ensure pre-commit and pre-push validation.
 
 ```bash
 yarn lint
@@ -18,9 +18,11 @@ yarn lint:fix
 yarn format
 ```
 
-### VSCODE
+### VSCODE SETUP
 
-Create `.vscode/setting.json` for auto-saving linter and prettier format
+Create a file `.vscode/settings.json` for auto-saving linter and prettier formatting. 
+
+Add the following:
 
 ```json
 {
@@ -34,12 +36,17 @@ Create `.vscode/setting.json` for auto-saving linter and prettier format
 }
 ```
 
-# RELEASE
+### RELEASE
 
-NPM package publish is automated with github actions, follow these steps:
+NPM package publishing is automated with github actions. Follow these steps:
 
-1 - Create a PR to `develop` branch updating `package.json` version. (review, approve and merge)
+#### 1. Create a PR to the `develop` branch
 
-2 - Create a PR from `develop` to `main`. (review, approve and merge)
+- Update `version` inside `package.json` 
+- Review, approve and merge.
 
-Once the PR to `main` is merged, this commit on this branch gonna trigger automatically the release to NPM, please make sure you update correctly the version.
+#### 2. Create a PR from `develop` to `main` 
+
+- Review, approve and merge
+
+*As the PR from (2.) is merged, the commit to `main` will automatically trigger a release to NPM, please make sure you correctly update the version.*
