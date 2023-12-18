@@ -20,7 +20,7 @@ export interface SquidData {
   maxPriorityFeePerGas?: string;
 }
 
-export type ChainCall = EvmContractCall | CosmosContractCall;
+export type ChainCall = EvmContractCall | CosmosCall;
 
 export interface EvmContractCall {
   chainType: ChainType.EVM;
@@ -50,9 +50,100 @@ export type SquidCallData = {
   payload: string;
 };
 
-export interface CosmosContractCall {
+export interface CosmosCall {
   chainType: ChainType.COSMOS;
-  call: CosmosCctpCall;
+  callType: CosmosCallType;
+  call:
+    | CosmosMulticallContractCall
+    | CosmosIbcTransferCall
+    | CosmosPfmCall
+    | CosmosGmpCall
+    | CosmosBankSendCall
+    | CosmosCctpCall;
+}
+
+export enum CosmosCallType {
+  MULTICALL,
+  IBC_TRANSFER,
+  PFM,
+  GMP,
+  CCTP,
+}
+
+export interface CosmosMulticallContractCall {
+  msg: object;
+  actions: (NativeBalanceFetchAction | IbcTrackingAction | FieldToProtoBinaryAction)[];
+}
+
+export interface NativeBalanceFetchAction {
+  native_balance_fetch: {
+    denom: string;
+    replacer: string;
+  };
+}
+
+export interface IbcTrackingAction {
+  ibc_tracking: {
+    channel: string;
+    denom: string;
+    amount?: string;
+    amount_pointer?: string;
+  };
+}
+
+export interface FieldToProtoBinaryAction {
+  field_to_binary: {
+    replacer: string;
+    proto_msg_type: "ibc_transfer" | "osmosis_swap_exact_amt_in";
+  };
+}
+
+export interface CosmosIbcTransferCall {
+  typeUrl: "/ibc.applications.transfer.v1.MsgTransfer";
+  value: {
+    sourcePort: "transfer";
+    sourceChannel: string;
+    token: {
+      denom: string;
+      amount: string;
+    };
+    sender: string;
+    receiver: string;
+    timeoutTimestamp: Long;
+    memo: string;
+  };
+}
+
+export interface CosmosPfmCall {
+  forward: {
+    receiver: string;
+    port: "transfer";
+    channel: string;
+    next?: object;
+  };
+}
+
+export interface CosmosGmpCall {
+  destination_chain: string;
+  destination_address: string;
+  payload?: number[];
+  type: number;
+  fee?: {
+    amount: string;
+    recipient: string;
+  };
+}
+
+export interface CosmosBankSendCall {
+  bank: {
+    send: {
+      to_address: string;
+      amount: {
+        denom: string;
+        amount: string;
+      }[];
+    };
+  };
 }
 
 export interface CosmosCctpCall {

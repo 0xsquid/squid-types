@@ -45,6 +45,10 @@ export interface ActionBaseData {
   isStable: boolean;
   exchangeId?: string;
   exchangeProvider?: string;
+  osmosisPools: {
+    poolId: string;
+    tokenOutDenom: string;
+  }[];
 
   // wrappers
   address: string;

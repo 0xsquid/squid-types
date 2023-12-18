@@ -138,7 +138,7 @@ export enum ChainName {
   KUJIRA = "kujira",
   NOBLE = "noble",
   OSMOSIS = "osmosis",
-  OSMOSIS5 = "osmosis-5", //testnet
+  OSMOSIS7 = "osmosis-7", //testnet
   REGEN = "regen",
   SEI = "sei",
   SECRET = "secret", //deprecated
@@ -147,6 +147,7 @@ export enum ChainName {
   STRIDE = "stride",
   TERRA2 = "terra-2",
   UMEE = "umee",
+  DYDX = "dydx",
 }
 
 export enum NetworkIdentifier {
@@ -195,6 +196,7 @@ export enum NetworkIdentifier {
   STRIDE = "Stride",
   TERRA2 = "Terra-2",
   UMEE = "Umee",
+  DYDX = "Dydx",
 }
 
 export type ChainIBCInfo = {
@@ -229,5 +231,6 @@ export type IbcData = {
 
 export enum CosmosChainFeatures {
   PACKET_FORWARD_MIDDLEWARE = "packet-forward-middleware",
+  LEGACY_IBC = "legacy-ibc",
   COSMWASM = "cosmwasm",
 }
