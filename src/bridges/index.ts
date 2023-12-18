@@ -11,6 +11,7 @@ export enum BridgeProvider {
   CCTP = "cctp",
   NOBLE_CCTP = "noble-cctp",
   IBC = "ibc",
+  PFM = "pfm",
 }
 
 export type BridgeConfig = Record<string, string>;

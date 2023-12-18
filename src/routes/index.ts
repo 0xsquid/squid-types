@@ -33,6 +33,7 @@ export interface RouteRequest {
   postHook?: Hook;
   prefer?: DexName[];
   receiveGasOnDestination?: boolean;
+  fallbackAddresses?: FallbackAddress[];
 }
 
 export interface RouteRequestPopulated {
@@ -53,6 +54,7 @@ export interface RouteRequestPopulated {
   postHook?: Hook;
   prefer?: DexName[];
   receiveGasOnDestination?: boolean;
+  fallbackAddresses?: FallbackAddress[];
 }
 
 export interface Estimate extends Omit<Route, "actions"> {
@@ -121,6 +123,10 @@ export interface SwapDetails {
   calls: ChainCall[];
   poolId: string;
   poolFee: string;
+  osmosisPools: {
+    poolId: string;
+    tokenOutDenom: string;
+  }[];
   coinAddresses: string[];
   isStable?: boolean;
   exchangeId?: string;
@@ -148,6 +154,11 @@ export interface Hook {
   calls: ChainCall[];
   description: string;
   hookUri?: string;
+}
+
+export interface FallbackAddress {
+  coinType: number;
+  address: string;
 }
 
 export enum ActionStage {
