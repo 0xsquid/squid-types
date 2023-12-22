@@ -31,6 +31,10 @@ export interface PathActionInternal {
   data: Record<string, any>;
 }
 
+export interface Buckets {
+  [key: number]: string;
+}
+
 export interface ActionBaseData {
   dex: DexName | Dex;
   chainId: string;
@@ -49,6 +53,7 @@ export interface ActionBaseData {
     poolId: string;
     tokenOutDenom: string;
   }[];
+  buckets: Buckets;
 
   // wrappers
   address: string;
