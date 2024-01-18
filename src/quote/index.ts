@@ -18,6 +18,7 @@ export interface Quote {
   estimatedRouteDuration: number;
   fromAmountUsd?: string;
   toAmountUsd?: string;
+  toAmountMinUsd?: string;
   aggregateSlippage?: number;
 }
 
