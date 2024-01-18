@@ -34,6 +34,7 @@ export interface RouteRequest {
   prefer?: DexName[];
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
+  bypassGuardrails?: boolean;
 }
 
 export interface RouteRequestPopulated {
@@ -74,6 +75,7 @@ export interface Route {
   estimatedRouteDuration: number;
   fromAmountUSD?: string;
   toAmountUSD?: string;
+  toAmountMinUSD?: string;
   isBoostSupported: boolean;
   gasCosts: GasCost[];
   feeCosts: FeeCost[];
