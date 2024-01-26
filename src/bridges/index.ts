@@ -22,4 +22,12 @@ export enum BridgeName {
   PFM = "IBC forward",
 }
 
+export enum BridgeIcon {
+  AXELAR = "https://raw.githubusercontent.com/0xsquid/assets/main/images/providers/axelar.svg",
+  CCTP = "https://raw.githubusercontent.com/0xsquid/assets/main/images/tokens/circle.svg",
+  NOBLE_CCTP = "https://raw.githubusercontent.com/0xsquid/assets/main/images/tokens/noble.svg",
+  IBC = "https://raw.githubusercontent.com/0xsquid/assets/main/images/tokens/ibc.svg",
+  PFM = "https://raw.githubusercontent.com/0xsquid/assets/main/images/tokens/ibc.svg",
+}
+
 export type BridgeConfig = Record<string, string>;
