@@ -57,6 +57,7 @@ export interface RouteRequestPopulated {
   prefer?: DexName[];
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
+  onChainQuoting?: boolean;
 }
 
 export interface Estimate extends Omit<Route, "actions"> {
