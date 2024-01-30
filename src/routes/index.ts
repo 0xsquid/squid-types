@@ -35,6 +35,7 @@ export interface RouteRequest {
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   bypassGuardrails?: boolean;
+  onChainQuoting?: boolean;
 }
 
 export interface RouteRequestPopulated {
