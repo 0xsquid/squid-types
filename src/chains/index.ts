@@ -161,7 +161,7 @@ export enum NetworkIdentifier {
   CELO = "Celo",
   FANTOM = "Fantom",
   FILECOIN = "Filecoin",
-  KAVA = "Kava",
+  KAVA = "Kava EVM",
   MANTLE = "Mantle",
   MOONBEAM = "Moonbeam",
   OPTIMISM = "Optimism",

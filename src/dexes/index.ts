@@ -127,6 +127,20 @@ export enum DexName {
 // identifiers dex adapters
 export enum DexType {
   // EVM
+  ALGEBRA = "algebra",
+  BALANCER_V2 = "balancer-v2",
+  CURVE = "curve",
+  GMX = "gmx",
+  KYBERSWAP_ELASTIC = "kyberswap-elastic",
+  PLATYPUS = "platypus",
+  PANCAKESWAP_STABLE = "pancakeswap-stable",
+  SADDLE = "saddle",
+  SOLIDLY = "solidly",
+  TRIDENT = "trident",
+  WOMBAT = "wombat",
+  UNISWAP_V2 = "uniswap-v2",
+  UNISWAP_V3 = "uniswap-v3",
+  MENTO_V2 = "mento-v2",
   
   
   // COSMOS
