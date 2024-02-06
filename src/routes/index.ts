@@ -58,6 +58,7 @@ export interface RouteRequestPopulated {
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   onChainQuoting?: boolean;
+  bypassGuardrails?: boolean;
 }
 
 export interface Estimate extends Omit<Route, "actions"> {
