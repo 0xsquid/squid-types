@@ -65,3 +65,9 @@ export enum AxelarRouteAction {
   GAS_PAID = "gas_paid",
   APPROVED = "approved",
 }
+
+export enum CCTPStatus {
+  ERROR = "error",
+  COMPLETE = "complete",
+  PENDING = "pending",
+}
