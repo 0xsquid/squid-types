@@ -11,8 +11,8 @@ export type BaseChain = {
   axelarChainName: ChainName;
   networkIdentifier: NetworkIdentifier;
   networkName: string;
-  rpc: string;
-  internalRpc: string;
+  rpc: string[];
+  internalRpc: string[];
   chainIconURI: string;
   blockExplorerUrls: string[];
   enableBoostByDefault: boolean;
