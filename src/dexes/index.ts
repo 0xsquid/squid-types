@@ -15,6 +15,7 @@ export enum DexName {
   BASESWAP = "Baseswap",
   BASESWAP_V3 = "Baseswap-v3",
   BEAMSWAP = "Beamswap",
+  BEAMSWAP_V3 = "Beamswap-v3",
   CAMELOT = "Camelot",
   CURVE_V2 = "Curve-v2",
   ELLIPSIS = "Ellipsis",
