@@ -20,6 +20,7 @@ export type BaseChain = {
   estimatedBoostRouteDuration: number;
   swapAmountForGas: string;
   sameChainSwapsSupported: boolean;
+  interchainService?: string;
   nativeCurrency: {
     name: string;
     symbol: string;

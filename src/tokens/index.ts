@@ -9,8 +9,8 @@ export interface Token {
   decimals: number;
   logoURI?: string;
   coingeckoId?: string;
+  interchainTokenId?: string;
   volatility: Volatility;
-  redstoneId?: string;
   usdPrice?: number;
   axelarNetworkSymbol?: string;
   subGraphOnly?: boolean;
