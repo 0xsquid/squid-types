@@ -16,9 +16,9 @@ export interface Quote {
   exchangeRate: string;
   aggregatePriceImpact: string;
   estimatedRouteDuration: number;
-  fromAmountUsd?: string;
-  toAmountUsd?: string;
-  toAmountMinUsd?: string;
+  fromAmountUSD?: string;
+  toAmountUSD?: string;
+  toAmountMinUSD?: string;
   aggregateSlippage?: number;
 }
 

@@ -76,9 +76,9 @@ export interface Route {
   exchangeRate: string;
   aggregatePriceImpact: string;
   estimatedRouteDuration: number;
-  fromAmountUsd?: string;
-  toAmountUsd?: string;
-  toAmountMinUsd?: string;
+  fromAmountUSD?: string;
+  toAmountUSD?: string;
+  toAmountMinUSD?: string;
   isBoostSupported: boolean;
   gasCosts: GasCost[];
   feeCosts: FeeCost[];
