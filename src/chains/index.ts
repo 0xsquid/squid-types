@@ -36,9 +36,6 @@ export type BaseChain = {
   bridges: {
     [key: string]: BridgeConfig;
   };
-  compliance?: {
-    trmIdentifier: string;
-  };
 };
 
 export type EvmChain = BaseChain & {
