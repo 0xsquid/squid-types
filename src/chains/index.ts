@@ -123,6 +123,7 @@ export enum ChainName {
   POLYGON = "Polygon",
   LINEA = "linea",
   SCROLL = "scroll",
+  BLAST = "blast",
 
   // Cosmos
   AGORIC = "agoric",
@@ -172,6 +173,7 @@ export enum NetworkIdentifier {
   POLYGON = "polygon",
   LINEA = "linea",
   SCROLL = "scroll",
+  BLAST = "blast",
 
   // COSMOS
   AGORIC = "agoric",
