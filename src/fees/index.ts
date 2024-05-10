@@ -1,9 +1,10 @@
 import { Token } from "../tokens";
 
 export enum FeeType {
-  AXELAR_FEE = "Axelar Fee",
-  GAS_RECEIVER_FEE = "Gas Receiver Fee",
-  EXPRESS_FEE = "Express Fee",
+  AXELAR_FEE = "Axelar fee",
+  GAS_RECEIVER_FEE = "Gas receiver fee",
+  BOOST_FEE = "Boost fee",
+  INTEGRATOR_FEE = "Integrator fee",
 }
 
 export enum GasCostType {
