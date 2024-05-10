@@ -55,6 +55,7 @@ export enum DexName {
   THENA_V3 = "Thena-v3",
   TRADERJOE = "TraderJoe",
   TRIDENT = "Trident",
+  THRUSTER_V3 = "Thruster-v3",
   UBESWAP = "Ubeswap",
   UBESWAP_V3 = "Ubeswap-v3",
   UNISWAP_V2 = "Uniswap-v2",
