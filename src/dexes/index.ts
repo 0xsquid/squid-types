@@ -9,6 +9,7 @@ export interface Dex {
 export enum DexName {
   AGNI_V3 = "Agni-v3",
   AERODROME = "Aerodrome",
+  AERODROME_V3 = "Aerodrome-v3",
   APESWAP = "Apeswap",
   APESWAP_V3 = "Apeswap-v3",
   BALANCER_V2 = "Balancer-v2",
@@ -62,6 +63,7 @@ export enum DexName {
   WOMBAT = "Wombat",
   VELODROME = "Velodrome",
   VELODROME_V2 = "Velodrome-v2",
+  VELODROME_V3 = "Velodrome-v3",
   VELOCIMETER = "Velocimeter",
   ZYBERSWAP = "Zyberswap",
   ZYBERSWAP_V3 = "Zyberswap-v3",
@@ -78,6 +80,7 @@ export enum DexType {
   PLATYPUS = "platypus",
   PANCAKESWAP_STABLE = "pancakeswap-stable",
   SADDLE = "saddle",
+  SLIPSTREAM = "slipstream",
   SOLIDLY = "solidly",
   TRIDENT = "trident",
   WOMBAT = "wombat",
