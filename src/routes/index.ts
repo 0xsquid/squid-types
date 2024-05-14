@@ -128,6 +128,7 @@ export interface SwapDetails {
   calls: ChainCall[];
   poolId: string;
   poolFee: string;
+  tickSpacing: number;
   osmosisPools: {
     poolId: string;
     tokenOutDenom: string;

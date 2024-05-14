@@ -54,6 +54,7 @@ export interface ActionBaseData {
     tokenOutDenom: string;
   }[];
   buckets: Buckets;
+  tickSpacing: number;
 
   // wrappers
   address: string;
