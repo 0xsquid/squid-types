@@ -136,6 +136,7 @@ export interface SwapDetails {
   isStable?: boolean;
   exchangeId?: string;
   exchangeProvider?: string;
+  address?: string;
   custom?: Record<string, any>;
 }
 
