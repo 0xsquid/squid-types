@@ -41,6 +41,7 @@ export enum DexName {
   QUICKSWAP = "Quickswap",
   QUICKSWAP_V3 = "Quickswap-v3",
   RAMSES = "Ramses",
+  RAMSES_V3 = "Ramses-v3",
   SPOOKYSWAP = "Spookyswap",
   STELLASWAP = "Stellaswap",
   STELLASWAP_V3 = "Stellaswap-v3",
