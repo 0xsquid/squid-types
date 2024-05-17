@@ -124,6 +124,7 @@ export enum ChainName {
   LINEA = "linea",
   SCROLL = "scroll",
   BLAST = "blast",
+  FRAXTAL = "fraxtal",
 
   // Cosmos
   AGORIC = "agoric",
@@ -174,6 +175,7 @@ export enum NetworkIdentifier {
   LINEA = "linea",
   SCROLL = "scroll",
   BLAST = "blast",
+  FRAXTAL = "fraxtal",
 
   // COSMOS
   AGORIC = "agoric",
