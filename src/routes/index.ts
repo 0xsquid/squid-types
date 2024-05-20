@@ -30,7 +30,7 @@ export interface RouteRequest {
   quoteOnly?: boolean;
   enableBoost?: boolean;
   preHook?: Hook;
-  postHook?: Hook;
+  postHook?: Omit<Hook, "fundAmount" | "fundToken">;
   prefer?: DexName[];
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
@@ -53,7 +53,7 @@ export interface RouteRequestPopulated {
   quoteOnly?: boolean;
   enableBoost?: boolean;
   preHook?: Hook;
-  postHook?: Hook;
+  postHook?: Omit<Hook, "fundAmount" | "fundToken">;
   prefer?: DexName[];
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
@@ -160,7 +160,8 @@ export interface Hook {
   fundToken: string;
   calls: ChainCall[];
   description: string;
-  hookUri?: string;
+  hookUri: string;
+  provider: string;
 }
 
 export interface FallbackAddress {
