@@ -156,9 +156,3 @@ export interface CosmosCctpCall {
     burnToken: string;
   };
 }
-
-export enum SlippageMode {
-  AGGRESSIVE,
-  NORMAL,
-  FLEXIBLE,
-}

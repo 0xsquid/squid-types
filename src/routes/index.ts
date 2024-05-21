@@ -2,7 +2,7 @@ import { ChainData, ChainType } from "../chains";
 import { Dex, DexName } from "../dexes";
 import { FeeCost, GasCost } from "../fees";
 import { QuoteAction } from "../quote";
-import { ChainCall, SlippageMode, SquidData } from "../squid";
+import { ChainCall, SquidData } from "../squid";
 import { Token } from "../tokens";
 import { WrapDirection, WrapperType } from "../wrappers";
 import { BridgeType } from "../bridges";
@@ -23,10 +23,7 @@ export interface RouteRequest {
   toChain: string;
   toToken: string;
   toAddress?: string;
-  slippageConfig: {
-    slippage?: number;
-    autoMode: SlippageMode;
-  };
+  slippage: number;
   quoteOnly?: boolean;
   enableBoost?: boolean;
   preHook?: Hook;
@@ -46,10 +43,7 @@ export interface RouteRequestPopulated {
   fromAmount: string;
   fromAddress?: string;
   toAddress?: string;
-  slippageConfig: {
-    slippage?: number;
-    autoMode: SlippageMode;
-  };
+  slippage: number;
   quoteOnly?: boolean;
   enableBoost?: boolean;
   preHook?: Hook;
