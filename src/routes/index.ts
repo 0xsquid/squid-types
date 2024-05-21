@@ -93,7 +93,7 @@ export interface RouteActionResponse extends Omit<RouteAction, "fromChain" | "to
 export interface RouteAction extends QuoteAction {
   provider?: string;
   description?: string;
-  hookUri?: string;
+  iconURI?: string;
   data: SwapDetails | WrapDetails | BridgeDetails | CustomCallDetails;
 }
 
@@ -160,7 +160,7 @@ export interface Hook {
   fundToken: string;
   calls: ChainCall[];
   description: string;
-  hookUri: string;
+  iconURI: string;
   provider: string;
 }
 
