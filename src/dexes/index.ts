@@ -62,6 +62,7 @@ export enum DexName {
   UBESWAP_V3 = "Ubeswap V3",
   UNISWAP_V2 = "Uniswap V2",
   UNISWAP_V3 = "Uniswap V3",
+  WAGMI_V3 = "Wagmi V3",
   WIGOSWAP_V2 = "Wigoswap V2",
   WOMBAT = "Wombat",
   VELODROME_SOLIDLY = "Velodrome Solidly",
