@@ -110,6 +110,7 @@ export interface WrapDetails {
   calls: ChainCall[];
   custom?: Record<string, any>;
   logoURI?: string;
+  name?: string;
   provider?: string;
 }
 
