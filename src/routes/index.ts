@@ -109,6 +109,8 @@ export interface WrapDetails {
   direction: WrapDirection;
   calls: ChainCall[];
   custom?: Record<string, any>;
+  logoURI?: string;
+  provider?: string;
 }
 
 export interface _SwapDetails extends Omit<SwapDetails, "dex"> {
@@ -133,6 +135,8 @@ export interface SwapDetails {
   exchangeProvider?: string;
   address?: string;
   custom?: Record<string, any>;
+  logoURI?: string;
+  provider?: string;
 }
 
 export interface BridgeDetails {
@@ -140,11 +144,14 @@ export interface BridgeDetails {
   provider: string;
   type: BridgeType;
   name: string;
+  logoURI?: string;
   calls?: ChainCall[];
 }
 
 export interface CustomCallDetails {
   name: string;
+  logoURI?: string;
+  provider?: string;
   calls: ChainCall[];
 }
 
