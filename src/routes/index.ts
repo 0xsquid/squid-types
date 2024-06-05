@@ -126,6 +126,7 @@ export interface SwapDetails {
   poolId: string;
   poolFee: string;
   tickSpacing: number;
+  binStep: number;
   osmosisPools: {
     poolId: string;
     tokenOutDenom: string;

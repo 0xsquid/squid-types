@@ -55,6 +55,7 @@ export interface ActionBaseData {
   }[];
   buckets: Buckets;
   tickSpacing: number;
+  binStep: number;
 
   // wrappers
   address: string;
