@@ -32,6 +32,7 @@ export enum DexName {
   KYBERSWAP = "KyberSwap",
   KYBERSWAP_AGGREGATOR = "kyberswap Aggregator",
   KINETIX_V3 = "Kinetix V3",
+  LYNEX_V3 = "Lynex V3",
   MENTO_V2 = "Mento V2",
   OPENOCEAN = "OpenOcean",
   OSMOSIS = "Osmosis",
