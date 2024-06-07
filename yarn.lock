@@ -7,17 +7,24 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@axelar-network/axelar-cgp-solidity@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@axelar-network/axelar-cgp-solidity/-/axelar-cgp-solidity-4.5.0.tgz#f0456a2a6665302613a4d5243282ce1b18842348"
-  integrity sha512-4F4rmHei0cmzeUR7/mW4Bap5rc/KlPV2crD9HA7HTRfl15mVcN6/3z8p+pAm9We6bOrQplNW9KBZ3HJFP3C1Gw==
-
-"@axelar-network/axelarjs-sdk@^0.13.6":
-  version "0.13.7"
-  resolved "https://registry.yarnpkg.com/@axelar-network/axelarjs-sdk/-/axelarjs-sdk-0.13.7.tgz#953b1866ae0c1efdf8e3abd0adbda71bcf3543f3"
-  integrity sha512-fqb31pXE/NoAmVUWIz+Dd5b+YYA893OD0ghZqlPicXagaozDnZZZVgPv0deythh4DWAqWl9D0dz0exbbkrL83A==
+"@axelar-network/axelar-cgp-solidity@^6.3.0":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@axelar-network/axelar-cgp-solidity/-/axelar-cgp-solidity-6.3.1.tgz#da35246f3002911368fd5fa7c7cb637ac4e642ec"
+  integrity sha512-RJmcOQbj2VhQb8uqBtu0beNj4MKRVjiYj74wXu6QI/a4bJ5EwwZK3+uCbTVNM9Qc7LqJqObhtGQfKUnAXEFCHA==
   dependencies:
-    "@axelar-network/axelar-cgp-solidity" "^4.5.0"
+    "@axelar-network/axelar-gmp-sdk-solidity" "5.8.0"
+
+"@axelar-network/axelar-gmp-sdk-solidity@5.8.0":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@axelar-network/axelar-gmp-sdk-solidity/-/axelar-gmp-sdk-solidity-5.8.0.tgz#449c6246b9f403af97a030b0a90b4f321c3a8a66"
+  integrity sha512-ThiCWK7lhwmsipgjKkw8c0z0ubB9toRMV9X0tRVOXHHSknKp5DCFfatbCwjpSC5GZRa+61ciTSqJNtCc7j9YoQ==
+
+"@axelar-network/axelarjs-sdk@^0.16.1":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@axelar-network/axelarjs-sdk/-/axelarjs-sdk-0.16.1.tgz#59eb7e40a18d70c9c50b50fece15eec4553b3fff"
+  integrity sha512-dhLe7yl3a37NxkZ1rEj7whMIANN/Ra+r8ZA10KvQ4LPRAHUNLGEcFwcbS9QaLRvDkKYFuJS2CCiJ86iYll1C7A==
+  dependencies:
+    "@axelar-network/axelar-cgp-solidity" "^6.3.0"
     "@axelar-network/axelarjs-types" "^0.33.0"
     "@cosmjs/json-rpc" "^0.30.1"
     "@cosmjs/stargate" "0.31.0-alpha.1"
