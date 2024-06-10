@@ -23,7 +23,7 @@ export interface RouteRequest {
   toChain: string;
   toToken: string;
   toAddress?: string;
-  slippage: number;
+  slippage?: number;
   quoteOnly?: boolean;
   enableBoost?: boolean;
   preHook?: Hook;
