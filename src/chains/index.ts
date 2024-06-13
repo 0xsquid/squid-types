@@ -168,7 +168,7 @@ export enum NetworkIdentifier {
   CELO = "celo",
   FANTOM = "fantom",
   FILECOIN = "filecoin",
-  IMMUTABLE = "immutable",
+  IMMUTABLE_ZKEVM = "immutable",
   KAVA = "kava",
   MANTLE = "mantle",
   MOONBEAM = "moonbeam",
