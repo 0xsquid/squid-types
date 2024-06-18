@@ -88,6 +88,7 @@ export interface RouteAction extends QuoteAction {
   provider?: string;
   description?: string;
   logoURI?: string;
+  estimatedDuration?: number;
   data: SwapDetails | WrapDetails | BridgeDetails | CustomCallDetails;
 }
 
