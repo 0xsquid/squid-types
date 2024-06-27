@@ -143,6 +143,7 @@ export enum ChainName {
   JUNO = "juno",
   KI = "ki",
   KUJIRA = "kujira",
+  NEUTRON = "neutron",
   NOBLE = "noble",
   OSMOSIS = "osmosis",
   OSMOSIS7 = "osmosis-7", //testnet
@@ -197,6 +198,7 @@ export enum NetworkIdentifier {
   KI = "ki",
   KUJIRA = "kujira",
   NOBLE = "noble",
+  NEUTRON = "neutron",
   OSMOSIS = "osmosis",
   REGEN = "regen",
   SEI = "sei",
