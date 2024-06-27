@@ -1,6 +1,6 @@
 {
   "name": "@0xsquid/squid-types",
-  "version": "0.1.84",
+  "version": "0.1.85",
   "description": "JS and TS types relating to 0xsquid related projects.",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
