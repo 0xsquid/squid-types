@@ -13,6 +13,7 @@ export enum DexName {
   AERODROME_V3 = "Aerodrome V3",
   APESWAP_V2 = "Apeswap V2",
   APESWAP_V3 = "Apeswap V3",
+  ASTROPORT = "Astroport",
   BALANCER_V2 = "Balancer V2",
   BASESWAP_V2 = "Baseswap V2",
   BASESWAP_V3 = "Baseswap V3",
@@ -102,6 +103,7 @@ export enum DexType {
   MENTO_V2 = "mento-v2",
   // COSMOS
   OSMOSIS = "osmosis",
+  ASTROPORT = "astroport",
 
   // ONCE WE START ADDING DEXES WE WILL BE MOVING THEM ABOVE
   /*
