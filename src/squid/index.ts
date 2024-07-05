@@ -110,7 +110,7 @@ export interface CosmosIbcTransferCall {
     };
     sender: string;
     receiver: string;
-    timeoutTimestamp: Long;
+    timeoutTimestamp: number;
     memo: string;
   };
 }

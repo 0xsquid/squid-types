@@ -1,7 +1,11 @@
-import { BlockTag } from "@ethersproject/providers";
-import { GMPError } from "@axelar-network/axelarjs-sdk";
-
 import { ChainData } from "../chains";
+
+export declare type BlockTag = string | number;
+export interface GMPError {
+  txHash: string;
+  chain: string;
+  message: string;
+}
 
 export type StatusRequest = {
   transactionId: string;
