@@ -1,4 +1,5 @@
 import { ChainType } from "../chains";
+import Long from "long";
 
 export enum SquidRouteType {
   CALL_BRIDGE_CALL = "CALL_BRIDGE_CALL",
