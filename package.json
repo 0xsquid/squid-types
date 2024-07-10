@@ -40,9 +40,11 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "long": "^5.2.3",
     "@axelar-network/axelarjs-sdk": "^0.16.1",
     "@ethersproject/providers": "^5.7.2",
-    "typescript": "*"
+    "typescript": "*",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.4.0",
