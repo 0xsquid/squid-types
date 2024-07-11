@@ -16,8 +16,6 @@ export type BaseChain = {
   chainIconURI: string;
   blockExplorerUrls: string[];
   enableBoostByDefault: boolean;
-  estimatedRouteDuration: number;
-  estimatedBoostRouteDuration: number;
   swapAmountForGas: string;
   sameChainSwapsSupported: boolean;
   interchainService?: string;
