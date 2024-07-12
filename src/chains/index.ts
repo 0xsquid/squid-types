@@ -16,8 +16,6 @@ export type BaseChain = {
   chainIconURI: string;
   blockExplorerUrls: string[];
   enableBoostByDefault: boolean;
-  estimatedRouteDuration: number;
-  estimatedBoostRouteDuration: number;
   swapAmountForGas: string;
   sameChainSwapsSupported: boolean;
   interchainService?: string;
@@ -58,6 +56,7 @@ export type EvmChain = BaseChain & {
 
 export type CosmosChain = BaseChain & {
   rest: string;
+  rpcList: string[];
   stakeCurrency: CosmosCurrency;
   walletUrl?: string;
   walletUrlForStaking?: string;
@@ -130,13 +129,11 @@ export enum ChainName {
   // Cosmos
   AGORIC = "agoric",
   ASSETMANTLE = "assetmantle",
-  AURA = "aura",
   AXELARNET = "axelarnet",
   CARBON = "carbon",
   COMDEX = "comdex",
   COSMOS = "cosmoshub",
   CRESCENT = "crescent",
-  EMONEY = "e-money",
   EVMOS = "evmos",
   FETCH = "fetch",
   INJECTIVE = "injective",
@@ -149,13 +146,48 @@ export enum ChainName {
   OSMOSIS7 = "osmosis-7", //testnet
   REGEN = "regen",
   SEI = "sei",
-  SECRET = "secret", //deprecated
   SECRETSNIP = "secret-snip",
   STARGAZE = "stargaze",
   STRIDE = "stride",
   TERRA2 = "terra-2",
   UMEE = "umee",
   DYDX = "dydx",
+  ACRECHAIN = "acre",
+  ARCHWAY = "archway",
+  BITCANNA = "bitcanna",
+  BITSONG = "bitsong",
+  CHEQD = "cheqd",
+  CELESTIA = "celestia",
+  COREUM = "coreum",
+  DECENTR = "decentr",
+  DESMOS = "desmos",
+  DIG = "dig",
+  DYMENSION = "dymension",
+  IRISNET = "irisnet",
+  IXO = "impacthub",
+  JACKAL = "jackal",
+  LUM = "lumnetwork",
+  LIKECOIN = "likecoin",
+  KAVA_IBC = "kava-ibc",
+  NOLUS = "nolus",
+  XPLA = "xpla", // disabled on V1
+  AKASH = "akash",
+  CHIHUAHUA = "chihuahua",
+  CRONOS = "cronos",
+  GRAVITYBRIDGE = "gravitybridge",
+  MARS = "mars",
+  MIGALOO = "migaloo",
+  PERSISTENCE = "persistence",
+  OMNIFLIXHUB = "omniflixhub",
+  QUICKSILVER = "quicksilver",
+  SOMMELIER = "sommelier",
+  TERRA = "terra",
+  TERITORI = "teritori",
+  SENTINEL = "sentinel",
+  HUMANS = "humans",
+  CHAIN4ENERGY = "c4e",
+  SAGA = "saga",
+  NIBIRU = "nibiru",
 }
 
 export enum NetworkIdentifier {
@@ -183,14 +215,12 @@ export enum NetworkIdentifier {
   // COSMOS
   AGORIC = "agoric",
   ASSETMANTLE = "assetmantle",
-  AURA = "aura",
   AXELAR = "axelar",
   AXELARNET = "axelarnet",
   CARBON = "carbon",
   COMDEX = "comdex",
   COSMOS = "cosmoshub",
   CRESCENT = "crescent",
-  EMONEY = "e-money",
   EVMOS = "evmos",
   FETCH = "fetch",
   INJECTIVE = "injective",
@@ -202,13 +232,47 @@ export enum NetworkIdentifier {
   OSMOSIS = "osmosis",
   REGEN = "regen",
   SEI = "sei",
-  SECRET = "secret", //deprecated
   SECRETSNIP = "secret-snip",
   STARGAZE = "stargaze",
   STRIDE = "stride",
   TERRA2 = "terra-2",
   UMEE = "umee",
   DYDX = "dydx",
+  ACRECHAIN = "acre",
+  ARCHWAY = "archway",
+  BITCANNA = "bitcanna",
+  BITSONG = "bitsong",
+  CHEQD = "cheqd",
+  CELESTIA = "celestia",
+  COREUM = "coreum",
+  DECENTR = "decentr",
+  DESMOS = "desmos",
+  DYMENSION = "dymension",
+  IRISNET = "irisnet",
+  IXO = "impacthub",
+  JACKAL = "jackal",
+  LUM = "lumnetwork",
+  LIKECOIN = "likecoin",
+  KAVA_IBC = "kava-ibc",
+  NOLUS = "nolus",
+  XPLA = "xpla", // disabled on V1
+  AKASH = "akash",
+  CHIHUAHUA = "chihuahua",
+  CRONOS = "cronos",
+  GRAVITYBRIDGE = "gravitybridge",
+  MARS = "mars",
+  MIGALOO = "migaloo",
+  PERSISTENCE = "persistence",
+  OMNIFLIXHUB = "omniflixhub",
+  QUICKSILVER = "quicksilver",
+  SOMMELIER = "sommelier",
+  TERRA = "terra",
+  TERITORI = "teritori",
+  SENTINEL = "sentinel",
+  HUMANS = "humans",
+  CHAIN4ENERGY = "c4e",
+  SAGA = "saga",
+  NIBIRU = "nibiru",
 }
 
 export type ChainIBCInfo = {
