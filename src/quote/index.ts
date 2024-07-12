@@ -12,7 +12,6 @@ export interface Quote {
   fromAmount: string;
   toAmount: string;
   toAmountMin: string;
-  sendAmount: string;
   exchangeRate: string;
   aggregatePriceImpact: string;
   estimatedRouteDuration: number;
