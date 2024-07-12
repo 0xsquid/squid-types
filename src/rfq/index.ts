@@ -1,4 +1,4 @@
-export interface Spoke {
+export interface RFQSubgraph {
   chainId: string;
   address: string;
   startBlock: string;
