@@ -1,6 +1,6 @@
 {
   "name": "@0xsquid/squid-types",
-  "version": "0.1.88",
+  "version": "0.1.88-fee",
   "description": "JS and TS types relating to 0xsquid related projects.",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
@@ -40,9 +40,9 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "long": "^5.2.3",
     "@axelar-network/axelarjs-sdk": "^0.16.1",
     "@ethersproject/providers": "^5.7.2",
+    "long": "^5.2.3",
     "typescript": "*",
     "ws": "^8.18.0"
   },
