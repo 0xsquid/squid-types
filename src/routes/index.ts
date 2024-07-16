@@ -3,7 +3,7 @@ import { Dex, DexName } from "../dexes";
 import { FeeCost, GasCost } from "../fees";
 import { QuoteAction } from "../quote";
 import { ChainCall, SquidData } from "../squid";
-import { Token } from "../tokens";
+import { Token, Volatility } from "../tokens";
 import { WrapDirection, WrapperType } from "../wrappers";
 import { BridgeType } from "../bridges";
 
@@ -97,6 +97,7 @@ export enum ActionType {
   BRIDGE = "bridge",
   IBC_TRANSFER = "ibc-transfer",
   CUSTOM = "custom",
+  FEE = "fee",
 }
 
 export interface WrapDetails {
@@ -157,6 +158,17 @@ export interface CustomCallDetails {
   calls: ChainCall[];
 }
 
+export interface Integrator {
+  id: string;
+  projectName: string;
+  contact: string;
+  contactName: string;
+  type: string;
+  website: string;
+  rps: number;
+  enabled: boolean;
+}
+
 export enum FEES_ENUM {
   PLATFORM = "PLATFORM",
   INTEGRATOR = "INTEGRATOR",
@@ -165,48 +177,63 @@ export enum FEES_ENUM {
   TIER = "TIER",
 }
 
+export interface PlatformFee {
+  type: FEES_ENUM.PLATFORM;
+  flat: number;
+  percentage: number;
+  enabled: boolean;
+  address: string;
+}
+
+export interface IntegratorFee {
+  type: FEES_ENUM.INTEGRATOR;
+  flat: number;
+  percentage: number;
+  flat2?: number;
+  percentage2?: number;
+  squidFlat: number;
+  squidPercentage: number;
+  enabled: boolean;
+  waivePlatformFee: boolean;
+  address: string;
+  address2?: string;
+  integrator?: Integrator;
+}
+
+export interface ChainFee {
+  type: FEES_ENUM.CHAIN;
+  flat: number;
+  percentage: number;
+  enabled: boolean;
+  waivePlatformFee: boolean;
+  chain?: ChainData;
+}
+
+export interface TokenFee {
+  type: FEES_ENUM.TOKEN;
+  flat: number;
+  percentage: number;
+  enabled: boolean;
+  waivePlatformFee: boolean;
+  token?: Token;
+}
+
+export interface TierFee {
+  type: FEES_ENUM.TIER;
+  tier: Volatility;
+  flat: number;
+  percentage: number;
+  enabled: boolean;
+  waivePlatformFee: boolean;
+}
+
 export interface FeeDetails {
-  platformFee: {
-    type: FEES_ENUM.PLATFORM;
-    flat: number;
-    percentage: number;
-    enabled: boolean;
-    address: string;
-  };
-  integratorFee: {
-    type: FEES_ENUM.INTEGRATOR;
-    flat: number;
-    percentage: number;
-    flat2?: number;
-    percentage2?: number;
-    squidFlat: number;
-    squidPercentage: number;
-    enabled: boolean;
-    waivePlatformFee: boolean;
-    address: string;
-    address2?: string;
-  };
-  chainFee: {
-    type: FEES_ENUM.CHAIN;
-    flat: number;
-    percentage: number;
-    enabled: boolean;
-    waivePlatformFee: boolean;
-  };
-  tokenFee: {
-    type: FEES_ENUM.TOKEN;
-    flat: number;
-    percentage: number;
-    enabled: boolean;
-    waivePlatformFee: boolean;
-  };
-  tierFee: {
-    type: FEES_ENUM.TIER;
-    flat: number;
-    percentage: number;
-    enabled: boolean;
-    waivePlatformFee: boolean;
-  };
+  calls?: ChainCall[];
+  platformFee: PlatformFee;
+  integratorFee: IntegratorFee;
+  chainFee: ChainFee;
+  tokenFee: TokenFee;
+  tierFee: TierFee;
   totalFeeAmount: bigint;
   platformFeeAmount: bigint;
   integratorFeeAmount: bigint;
