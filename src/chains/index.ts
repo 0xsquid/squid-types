@@ -37,6 +37,7 @@ export type BaseChain = {
   compliance?: {
     trmIdentifier: string;
   };
+  boostSupported?: boolean;
 };
 
 export type EvmChain = BaseChain & {
