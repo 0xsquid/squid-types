@@ -160,12 +160,6 @@ export interface CustomCallDetails {
 
 export interface Integrator {
   id: string;
-  projectName: string;
-  contact: string;
-  contactName: string;
-  type: string;
-  website: string;
-  rps: number;
   enabled: boolean;
 }
 
