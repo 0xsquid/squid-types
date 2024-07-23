@@ -1,10 +1,3 @@
-export interface RFQSubgraph {
-  chainId: string;
-  address: string;
-  startBlock: string;
-  subgraphUrl: string;
-}
-
 export enum SpokeEventType {
   ORDER_CREATED = "OrderCreated",
   ORDER_FILLED = "OrderFilled",
