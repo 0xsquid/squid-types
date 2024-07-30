@@ -5,6 +5,7 @@ export enum FeeType {
   GAS_RECEIVER_FEE = "Gas receiver fee",
   BOOST_FEE = "Boost fee",
   INTEGRATOR_FEE = "Integrator fee",
+  CHAINFLIP_FEE = "Chainflip fee",
 }
 
 export enum GasCostType {
