@@ -65,6 +65,7 @@ export interface ActionBaseData {
   // bridges
   name: string;
   provider: string;
+  liquidityProvider: string;
 }
 
 export interface PathAction {
