@@ -8,6 +8,8 @@ export enum SquidRouteType {
   BRIDGE = "BRIDGE",
   EVM_ONLY = "EVM_ONLY",
   COSMOS_ONLY = "COSMOS_ONLY",
+  RFQ = "RFQ",
+  FUND_AND_RUN_MULTICALL = "FUND_AND_RUN_MULTICALL",
 }
 
 export interface SquidData {
