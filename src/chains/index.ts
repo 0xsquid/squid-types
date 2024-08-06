@@ -3,6 +3,7 @@ import { BridgeConfig } from "bridges";
 export enum ChainType {
   EVM = "evm",
   COSMOS = "cosmos",
+  BTC = "bitcoin",
 }
 
 export type BaseChain = {
@@ -99,7 +100,7 @@ export type CosmosGasType = {
   high: number;
 };
 
-export type ChainData = EvmChain | CosmosChain;
+export type ChainData = BaseChain | EvmChain | CosmosChain;
 
 export enum ChainName {
   ARBITRUM = "Arbitrum",
@@ -189,6 +190,9 @@ export enum ChainName {
   CHAIN4ENERGY = "c4e",
   SAGA = "saga",
   NIBIRU = "nibiru",
+
+  // BTC
+  BITCOIN = "bitcoin",
 }
 
 export enum NetworkIdentifier {
@@ -274,6 +278,9 @@ export enum NetworkIdentifier {
   CHAIN4ENERGY = "c4e",
   SAGA = "saga",
   NIBIRU = "nibiru",
+
+  // BTC
+  BITCOIN = "bitcoin",
 }
 
 export type ChainIBCInfo = {

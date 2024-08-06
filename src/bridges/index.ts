@@ -4,6 +4,7 @@ export enum BridgeType {
   CCTP = "cctp",
   NOBLE_CCTP = "noble-cctp",
   IBC = "ibc",
+  CHAINFLIP = "chainflip",
   RFQ = "rfq",
 }
 
@@ -13,6 +14,7 @@ export enum BridgeProvider {
   NOBLE_CCTP = "Noble CCTP",
   IBC = "IBC",
   PFM = "IBC Packet forward middleware",
+  CHAINFLIP = "Chainflip",
   RFQ = "RFQ",
 }
 

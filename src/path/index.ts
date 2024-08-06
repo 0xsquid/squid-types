@@ -81,8 +81,6 @@ export interface PathAction {
 export interface PathParams {
   fromChainId: string;
   toChainId: string;
-  fromToken: Pick<Token, "type" | "chainId" | "name" | "symbol" | "decimals" | "address">;
-  toToken: Pick<Token, "type" | "chainId" | "name" | "symbol" | "decimals" | "address">;
-  maxResults?: number;
-  subgraphIds?: string[];
+  fromToken: string;
+  toToken: string;
 }
