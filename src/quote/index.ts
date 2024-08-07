@@ -6,6 +6,7 @@ import {
   PathAction,
   WrapDetails,
   FeeDetails,
+  LiquidityProviderDetails,
 } from "../index";
 
 export interface Quote {
@@ -29,5 +30,5 @@ export interface QuoteAction extends Omit<PathAction, "data"> {
   exchangeRate: string;
   priceImpact: string;
   stage?: ActionStage;
-  data: SwapDetails | WrapDetails | BridgeDetails | CustomCallDetails | FeeDetails;
+  data: SwapDetails | WrapDetails | BridgeDetails | CustomCallDetails | FeeDetails | LiquidityProviderDetails;
 }

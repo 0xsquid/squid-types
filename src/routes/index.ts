@@ -80,7 +80,13 @@ export interface Route {
 export interface RouteActionResponse extends Omit<RouteAction, "fromChain" | "toChain" | "data"> {
   fromChain: string;
   toChain: string;
-  data: _SwapDetails | WrapDetails | BridgeDetails | CustomCallDetails;
+  data:
+    | _SwapDetails
+    | WrapDetails
+    | BridgeDetails
+    | CustomCallDetails
+    | FeeDetails
+    | LiquidityProviderDetails;
 }
 
 export interface RouteAction extends QuoteAction {
@@ -88,7 +94,13 @@ export interface RouteAction extends QuoteAction {
   description?: string;
   logoURI?: string;
   estimatedDuration?: number;
-  data: SwapDetails | WrapDetails | BridgeDetails | CustomCallDetails | FeeDetails;
+  data:
+    | SwapDetails
+    | WrapDetails
+    | BridgeDetails
+    | CustomCallDetails
+    | FeeDetails
+    | LiquidityProviderDetails;
 }
 
 export enum ActionType {
@@ -98,6 +110,7 @@ export enum ActionType {
   IBC_TRANSFER = "ibc-transfer",
   CUSTOM = "custom",
   FEE = "fee",
+  RFQ = "rfq",
 }
 
 export interface WrapDetails {
@@ -156,6 +169,16 @@ export interface CustomCallDetails {
   logoURI?: string;
   provider?: string;
   calls: ChainCall[];
+}
+
+export interface LiquidityProviderDetails {
+  liquidityProvider: string;
+  target: string;
+  provider: string;
+  type: BridgeType;
+  name: string;
+  logoURI?: string;
+  calls?: ChainCall[];
 }
 
 export interface Integrator {

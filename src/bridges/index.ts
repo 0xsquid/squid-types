@@ -5,6 +5,7 @@ export enum BridgeType {
   NOBLE_CCTP = "noble-cctp",
   IBC = "ibc",
   CHAINFLIP = "chainflip",
+  RFQ = "rfq",
 }
 
 export enum BridgeProvider {
@@ -14,6 +15,7 @@ export enum BridgeProvider {
   IBC = "IBC",
   PFM = "IBC Packet forward middleware",
   CHAINFLIP = "Chainflip",
+  RFQ = "RFQ",
 }
 
 export type BridgeConfig = Record<string, string>;
