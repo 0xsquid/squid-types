@@ -83,4 +83,5 @@ export interface PathParams {
   toChainId: string;
   fromToken: string;
   toToken: string;
+  amountInUsd: number;
 }
