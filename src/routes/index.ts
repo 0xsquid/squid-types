@@ -179,6 +179,8 @@ export interface LiquidityProviderDetails {
   name: string;
   logoURI?: string;
   calls?: ChainCall[];
+  fillerAddress: string;
+  expiry: string;
 }
 
 export interface Integrator {

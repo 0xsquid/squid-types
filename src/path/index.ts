@@ -64,8 +64,11 @@ export interface ActionBaseData {
 
   // bridges
   name: string;
+
+  // rfq
   provider: string;
   liquidityProvider: string;
+  fillerAddress: string;
 }
 
 export interface PathAction {

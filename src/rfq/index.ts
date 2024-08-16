@@ -10,3 +10,22 @@ export enum HubEventType {
   SETTLEMENT_FILLED = "SettlementFilled",
   SETTLEMENT_PROCESSED = "SettlementProcessed",
 }
+
+export type Order = {
+  fromAddress: string;
+  toAddress: string;
+  filler: string;
+  fromToken: string;
+  toToken: string;
+  expiry: string;
+  fromAssetType: string;
+  toAssetType: string;
+  fromAmount: string;
+  tokenId: string;
+  fillAmount: string;
+  fillTokenId: string;
+  feeRate: string;
+  fromChain: string;
+  toChain: string;
+  postHookHash: string;
+};
