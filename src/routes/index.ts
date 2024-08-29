@@ -261,6 +261,7 @@ export interface FeeDetails {
   chainFeeAmount: bigint;
   tokenFeeAmount: bigint;
   tierFeeAmount: bigint;
+  logoURI: string;
 }
 
 export interface Hook {
