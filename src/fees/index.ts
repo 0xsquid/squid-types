@@ -6,6 +6,8 @@ export enum FeeType {
   BOOST_FEE = "Boost fee",
   INTEGRATOR_FEE = "Integrator fee",
   CHAINFLIP_FEE = "Chainflip fee",
+  EXECUTION_FEE = "Execution fee",
+  SETTLEMENT_FEE = "Settlement fee",
 }
 
 export enum GasCostType {
