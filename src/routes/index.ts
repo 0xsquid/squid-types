@@ -94,6 +94,7 @@ export interface RouteAction extends QuoteAction {
   description?: string;
   logoURI?: string;
   estimatedDuration?: number;
+  orderHash?: string;
   data:
     | SwapDetails
     | WrapDetails
