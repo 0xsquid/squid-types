@@ -23,10 +23,16 @@ type TransactionStatus = {
   callEventLog: Array<any>;
   chainData?: ChainData;
   transactionUrl?: string;
+  destinationAddress?: string;
+};
+
+export type YupError = {
+  path: string;
+  message: string;
 };
 
 export type ApiBasicResponse = {
-  error?: string | TypeError[] | GMPError;
+  error?: string | TypeError[] | YupError[] | GMPError;
   errorType?: string;
 };
 
@@ -55,7 +61,7 @@ export type StatusResponse = ApiBasicResponse & {
 export type RouteStatus = {
   chainId: string | number;
   txHash: string;
-  status: string;
+  status: RouteActionStatus;
   action: AxelarRouteAction;
 };
 
@@ -70,8 +76,21 @@ export enum AxelarRouteAction {
   APPROVED = "approved",
 }
 
+export enum RouteActionStatus {
+  SUCCESS = "success",
+  FAILURE = "failure",
+  NOT_FOUND = "not_found",
+  UNKNOWN = "unknown",
+  AWAITING = "awaiting",
+}
+
 export enum CCTPStatus {
   ERROR = "error",
   COMPLETE = "complete",
   PENDING = "pending",
+}
+
+export enum SendTokenStatus {
+  ASSET_SENT = "asset_sent",
+  EXECUTED = "executed",
 }
