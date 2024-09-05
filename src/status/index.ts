@@ -1,5 +1,3 @@
-import { ChainData } from "../chains";
-
 export declare type BlockTag = string | number;
 export interface GMPError {
   txHash: string;
@@ -21,7 +19,7 @@ type TransactionStatus = {
   blockNumber: string;
   callEventStatus: string;
   callEventLog: Array<any>;
-  chainData?: ChainData;
+  chainData?: any;
   transactionUrl?: string;
   destinationAddress?: string;
 };
