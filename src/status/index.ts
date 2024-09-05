@@ -1,5 +1,3 @@
-import { ChainData } from "../chains";
-
 export declare type BlockTag = string | number;
 export interface GMPError {
   txHash: string;
