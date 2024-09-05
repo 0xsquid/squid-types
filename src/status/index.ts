@@ -21,7 +21,7 @@ type TransactionStatus = {
   blockNumber: string;
   callEventStatus: string;
   callEventLog: Array<any>;
-  chainData?: ChainData;
+  chainData?: any;
   transactionUrl?: string;
   destinationAddress?: string;
 };
