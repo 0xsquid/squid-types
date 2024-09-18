@@ -22,6 +22,7 @@ export interface SquidData {
   maxFeePerGas?: string;
   maxPriorityFeePerGas?: string;
   requestId?: string;
+  expiry?: string;
 }
 
 export type ChainCall = EvmContractCall | CosmosCall;
