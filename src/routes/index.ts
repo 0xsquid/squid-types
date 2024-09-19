@@ -32,7 +32,6 @@ export interface RouteRequest {
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   bypassGuardrails?: boolean;
-  onChainQuoting?: boolean;
 }
 
 export interface RouteRequestPopulated {
@@ -51,7 +50,6 @@ export interface RouteRequestPopulated {
   prefer?: DexName[];
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
-  onChainQuoting?: boolean;
   bypassGuardrails?: boolean;
 }
 

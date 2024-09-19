@@ -30,5 +30,11 @@ export interface QuoteAction extends Omit<PathAction, "data"> {
   exchangeRate: string;
   priceImpact: string;
   stage?: ActionStage;
-  data: SwapDetails | WrapDetails | BridgeDetails | CustomCallDetails | FeeDetails | LiquidityProviderDetails;
+  data:
+    | SwapDetails
+    | WrapDetails
+    | BridgeDetails
+    | CustomCallDetails
+    | FeeDetails
+    | LiquidityProviderDetails;
 }
