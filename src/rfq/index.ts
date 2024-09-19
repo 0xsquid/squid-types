@@ -18,12 +18,8 @@ export type Order = {
   fromToken: string;
   toToken: string;
   expiry: string;
-  fromAssetType: string;
-  toAssetType: string;
   fromAmount: string;
-  tokenId: string;
   fillAmount: string;
-  fillTokenId: string;
   feeRate: string;
   fromChain: string;
   toChain: string;
