@@ -4,6 +4,7 @@ export enum ChainType {
   EVM = "evm",
   COSMOS = "cosmos",
   BTC = "bitcoin",
+  SOLANA = "solana",
 }
 
 export type BaseChain = {
@@ -195,6 +196,9 @@ export enum ChainName {
 
   // BTC
   BITCOIN = "bitcoin",
+
+  // SOL
+  SOLANA = "solana",
 }
 
 export enum NetworkIdentifier {
@@ -285,6 +289,9 @@ export enum NetworkIdentifier {
 
   // BTC
   BITCOIN = "bitcoin",
+
+  // SOL
+  SOLANA = "solana",
 }
 
 export type ChainIBCInfo = {
