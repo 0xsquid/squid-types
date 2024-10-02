@@ -18,6 +18,7 @@ export interface Token {
   feeOnTransfer?: boolean;
   isLpToken?: boolean;
   disabled?: boolean;
+  originalAddress?: string;
 }
 
 export interface CosmosToken extends Token {
