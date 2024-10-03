@@ -6,6 +6,7 @@ export enum BridgeType {
   IBC = "ibc",
   CHAINFLIP = "chainflip",
   RFQ = "rfq",
+  ITB = "immutable-token-bridge",
 }
 
 export enum BridgeProvider {
@@ -16,6 +17,7 @@ export enum BridgeProvider {
   PFM = "IBC Packet forward middleware",
   CHAINFLIP = "Chainflip",
   RFQ = "RFQ",
+  IMMUTABLE = "Immutable",
 }
 
 export type BridgeConfig = Record<string, string>;
