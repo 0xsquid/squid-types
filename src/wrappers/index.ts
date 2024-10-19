@@ -16,7 +16,7 @@ export enum WrapperName {
   WSTETH = "Lido Wrapped stETH",
   WRAPPED_MAI = "QiDAO Wrapped MAI",
   WRAPPED_USDY = "Ondo Finance",
-  SKY_PROTOCOAL_USDS = "DAI USDS Converter",
+  SKY_PROTOCOL_USDS = "DAI USDS Converter",
   SKY_PROTOCOL_SKY = "MKR SKY Converter",
 }
 
