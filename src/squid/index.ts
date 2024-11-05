@@ -15,7 +15,6 @@ export enum SquidRouteType {
 export interface SquidData {
   routeType: SquidRouteType;
   target: string;
-  spender?: string;
   data: string;
   value: string;
   gasLimit?: string;
