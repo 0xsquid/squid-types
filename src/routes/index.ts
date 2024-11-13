@@ -291,6 +291,7 @@ export enum ActionStage {
   BTC_DESTINATION,
   SOLANA_SOURCE,
   SOLANA_DESTINATION,
+  SOLANA_ONLY,
 }
 
 export interface StageContext {
