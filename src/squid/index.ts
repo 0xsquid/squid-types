@@ -13,7 +13,15 @@ export enum SquidRouteType {
   FUND_AND_RUN_MULTICALL = "FUND_AND_RUN_MULTICALL",
 }
 
-export interface SquidData {
+export enum SquidDataType {
+  OnChainExecition = "ON_CHAIN_EXECUTION",
+  ChainflipDepositAddress = "CHAINFLIP_DEPOSIT_ADDRESS",
+}
+
+export type SquidData = OnChainExecutionData | ChainflipDepositAddressData;
+
+export interface OnChainExecutionData {
+  type: SquidDataType;
   routeType: SquidRouteType;
   target: string;
   data: string;
@@ -24,7 +32,24 @@ export interface SquidData {
   maxPriorityFeePerGas?: string;
   requestId?: string;
   expiry?: string;
-  chainflipId?: string;
+}
+
+export interface ChainflipDepositAddressData {
+  type: SquidDataType;
+  request: {
+    amount: string;
+    fromChain: string;
+    fromAsset: string;
+    toChain: string;
+    toAsset: string;
+    fromAddress?: string;
+    toAddress: string;
+    maxBoostFeeBps?: number;
+    ccmParams?: {
+      message: string;
+      gasBudget: string;
+    };
+  };
 }
 
 export type ChainCall = EvmContractCall | CosmosCall;
