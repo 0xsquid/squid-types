@@ -49,6 +49,11 @@ export interface ChainflipDepositAddressData {
       message: string;
       gasBudget: string;
     };
+    fillOrKillParams: {
+      minPrice: string;
+      refundAddress: string;
+      retryDurationBlocks: number;
+    };
   };
 }
 
