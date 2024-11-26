@@ -41,6 +41,7 @@ export enum SquidTransactionStatus {
   PARTIAL_SUCCESS = "partial_success",
   NOT_FOUND = "not_found",
   FAILED_DESTINATION = "failed_on_destination",
+  REFUNDED = "refunded",
 }
 
 export type StatusResponse = ApiBasicResponse & {
@@ -80,6 +81,7 @@ export enum RouteActionStatus {
   NOT_FOUND = "not_found",
   UNKNOWN = "unknown",
   AWAITING = "awaiting",
+  REFUNDED = "refunded",
 }
 
 export enum CCTPStatus {
