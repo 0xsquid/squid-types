@@ -14,7 +14,7 @@ export enum SquidRouteType {
 }
 
 export enum SquidDataType {
-  OnChainExecition = "ON_CHAIN_EXECUTION",
+  OnChainExecution = "ON_CHAIN_EXECUTION",
   ChainflipDepositAddress = "CHAINFLIP_DEPOSIT_ADDRESS",
 }
 
