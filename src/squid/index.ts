@@ -13,15 +13,15 @@ export enum SquidRouteType {
   FUND_AND_RUN_MULTICALL = "FUND_AND_RUN_MULTICALL",
 }
 
-export enum SquidDataType {
-  OnChainExecution = "ON_CHAIN_EXECUTION",
-  ChainflipDepositAddress = "CHAINFLIP_DEPOSIT_ADDRESS",
-}
+// export enum SquidDataType {
+//   OnChainExecution = "ON_CHAIN_EXECUTION",
+//   ChainflipDepositAddress = "CHAINFLIP_DEPOSIT_ADDRESS",
+// }
 
-export type SquidData = OnChainExecutionData | ChainflipDepositAddressData;
+// export type SquidData = OnChainExecutionData | ChainflipDepositAddressData;
 
-export interface OnChainExecutionData {
-  type: SquidDataType;
+export interface SquidData {
+  // type: SquidDataType;
   routeType: SquidRouteType;
   target: string;
   data: string;
@@ -32,30 +32,31 @@ export interface OnChainExecutionData {
   maxPriorityFeePerGas?: string;
   requestId?: string;
   expiry?: string;
+  chainflipId?: string;
 }
 
-export interface ChainflipDepositAddressData {
-  type: SquidDataType;
-  request: {
-    amount: string;
-    fromChain: string;
-    fromAsset: string;
-    toChain: string;
-    toAsset: string;
-    fromAddress?: string;
-    toAddress: string;
-    maxBoostFeeBps?: number;
-    ccmParams?: {
-      message: string;
-      gasBudget: string;
-    };
-    fillOrKillParams: {
-      minPrice: string;
-      refundAddress: string;
-      retryDurationBlocks: number;
-    };
-  };
-}
+// export interface ChainflipDepositAddressData {
+//   type: SquidDataType;
+//   request: {
+//     amount: string;
+//     fromChain: string;
+//     fromAsset: string;
+//     toChain: string;
+//     toAsset: string;
+//     fromAddress?: string;
+//     toAddress: string;
+//     maxBoostFeeBps?: number;
+//     ccmParams?: {
+//       message: string;
+//       gasBudget: string;
+//     };
+//     fillOrKillParams: {
+//       minPrice: string;
+//       refundAddress: string;
+//       retryDurationBlocks: number;
+//     };
+//   };
+// }
 
 export type ChainCall = EvmContractCall | CosmosCall;
 
