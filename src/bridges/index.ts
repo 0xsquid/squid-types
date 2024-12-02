@@ -16,7 +16,7 @@ export enum BridgeProvider {
   IBC = "IBC",
   PFM = "IBC Packet forward middleware",
   CHAINFLIP = "Chainflip",
-  RFQ = "RFQ",
+  RFQ = "Coral",
   IMMUTABLE = "Immutable",
 }
 
