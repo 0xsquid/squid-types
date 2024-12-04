@@ -25,7 +25,6 @@ export interface RouteRequest {
   toAddress?: string;
   slippage?: number;
   quoteOnly?: boolean;
-  enableBoost?: boolean;
   preHook?: Hook;
   postHook?: Omit<Hook, "fundAmount" | "fundToken">;
   prefer?: DexName[];
