@@ -4,7 +4,7 @@ export enum FeatureFlagType {
   Solana = "solana",
   Chainflip = "chainflip",
   Coral = "coral",
-  Chainflip_Multihop = "chainflip_multihop",
+  ChainflipMultihop = "chainflipMultihop",
 }
 
 export interface FeatureFlag {
