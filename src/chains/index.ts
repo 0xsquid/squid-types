@@ -193,6 +193,7 @@ export enum ChainName {
   NIBIRU = "nibiru",
   LAVA = "lava",
   KYVE = "kyve",
+  XION = "xion",
 
   // BTC
   BITCOIN = "bitcoin",
@@ -286,6 +287,7 @@ export enum NetworkIdentifier {
   NIBIRU = "nibiru",
   LAVA = "lava",
   KYVE = "kyve",
+  XION = "xion",
 
   // BTC
   BITCOIN = "bitcoin",
