@@ -25,6 +25,7 @@ export enum DexName {
   ELLIPSIS = "Ellipsis",
   EQUILIBRE = "Equilibre",
   EQUALIZER = "Equalizer",
+  FRAXSWAP_V2 = "Fraxswap V2",
   FUSIONX_V2 = "FusionX V2",
   FUSIONX_V3 = "FusionX V3",
   GMX = "GMX",
