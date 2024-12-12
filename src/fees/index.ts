@@ -23,6 +23,7 @@ export type FeeCost = {
   token: Token;
   amount: string;
   amountUsd: string;
+  logoURI?: string;
 };
 
 export type GasCost = {
