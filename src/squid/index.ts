@@ -37,14 +37,10 @@ export interface OnChainExecutionData {
 export interface ChainflipDepositAddressData {
   type: SquidDataType;
   request: {
+    quote: any;
     amount: string;
-    fromChain: string;
-    fromAsset: string;
-    toChain: string;
-    toAsset: string;
     fromAddress?: string;
     toAddress: string;
-    maxBoostFeeBps?: number;
     ccmParams?: {
       message: string;
       gasBudget: string;
