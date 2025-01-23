@@ -32,6 +32,7 @@ export interface OnChainExecutionData {
   maxPriorityFeePerGas?: string;
   requestId?: string;
   expiry?: string;
+  expiryOffset?: string;
 }
 
 export interface ChainflipDepositAddressData {
