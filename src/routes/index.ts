@@ -27,7 +27,6 @@ export interface RouteRequest {
   quoteOnly?: boolean;
   preHook?: Hook;
   postHook?: Omit<Hook, "fundAmount" | "fundToken">;
-  prefer?: DexName[];
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   bypassGuardrails?: boolean;
@@ -46,7 +45,6 @@ export interface RouteRequestPopulated {
   enableBoost?: boolean;
   preHook?: Hook;
   postHook?: Omit<Hook, "fundAmount" | "fundToken">;
-  prefer?: DexName[];
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   bypassGuardrails?: boolean;
