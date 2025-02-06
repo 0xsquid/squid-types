@@ -194,6 +194,10 @@ export enum ChainName {
   LAVA = "lava",
   KYVE = "kyve",
   XION = "xion",
+  SAGA_HUB = "hub",
+  SAGA_DEX = "saga_evm",
+  SAGA_MARIA = "maria",
+  SAGA_NIRVANA = "nirvana",
 
   // BTC
   BITCOIN = "bitcoin",
@@ -288,6 +292,10 @@ export enum NetworkIdentifier {
   LAVA = "lava",
   KYVE = "kyve",
   XION = "xion",
+  SAGA_HUB = "hub",
+  SAGA_DEX = "saga_evm",
+  SAGA_MARIA = "maria",
+  SAGA_NIRVANA = "nirvana",
 
   // BTC
   BITCOIN = "bitcoin",
