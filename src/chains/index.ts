@@ -128,6 +128,7 @@ export enum ChainName {
   SCROLL = "scroll",
   BLAST = "blast",
   FRAXTAL = "fraxtal",
+  BERACHAIN = "berachain",
 
   // Cosmos
   AGORIC = "agoric",
@@ -227,6 +228,7 @@ export enum NetworkIdentifier {
   SCROLL = "scroll",
   BLAST = "blast",
   FRAXTAL = "fraxtal",
+  BERACHAIN = "berachain",
 
   // COSMOS
   AGORIC = "agoric",
