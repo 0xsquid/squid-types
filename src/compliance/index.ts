@@ -3,6 +3,7 @@ export enum TRMIdentifier {
   ARBITRUM = "arbitrum",
   AVALANCHE = "avalanche_c_chain",
   BASE = "base",
+  BERACHAIN = "berachain",
   BINANCE = "binance",
   BINANCE_SMART_CHAIN = "binance_smart_chain",
   BITCOIN = "bitcoin",
