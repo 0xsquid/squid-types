@@ -71,6 +71,7 @@ export type CosmosChain = BaseChain & {
   coinType?: number;
   features?: string[];
   gasPriceStep?: CosmosGasType;
+  isEvmos?: boolean;
   chainToAxelarChannelId: string;
 };
 
