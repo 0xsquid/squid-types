@@ -5,6 +5,7 @@ export enum ChainType {
   COSMOS = "cosmos",
   BTC = "bitcoin",
   SOLANA = "solana",
+  XRP = "xrp",
 }
 
 export type BaseChain = {
