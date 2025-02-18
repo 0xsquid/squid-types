@@ -21,11 +21,6 @@ jobs:
           yarn install
           yarn build
 
-      - name: Bump version to beta
-        run: |
-          npm version prerelease --preid=beta
-          echo "New version: $(node -p "require('./package.json').version")"
-
       - name: Publish Beta Release
         id: publish
         uses: JS-DevTools/npm-publish@v2
