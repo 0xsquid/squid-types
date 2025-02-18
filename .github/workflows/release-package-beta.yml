@@ -1,0 +1,39 @@
+name: Squid Types Beta Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: Release Beta Squid Types package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Authenticate with private NPM package
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Install dependencies
+        run: |
+          yarn install
+          yarn build
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Bump version to beta
+        run: |
+          npm version prerelease --preid=beta --git-tag-version=true
+          echo "New version: $(node -p "require('./package.json').version")"
+
+      - name: Publish Beta Release
+        id: publish
+        uses: JS-DevTools/npm-publish@v2
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          tag: beta

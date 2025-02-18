@@ -15,11 +15,7 @@
     "clean": "rimraf dist node_modules",
     "lint": "eslint src/ --ext .js,.ts,.json",
     "lint:fix": "yarn lint --fix",
-    "format": "prettier --ignore-path .gitignore --write --log-level error \"**/*.+(js|ts|json)\"",
-    "release": "release-it",
-    "release:pre": "release-it --preRelease=beta",
-    "release:ci": "release-it --ci",
-    "release:dry": "release-it --dry-run"
+    "format": "prettier --ignore-path .gitignore --write --log-level error \"**/*.+(js|ts|json)\""
   },
   "repository": {
     "type": "git",
@@ -59,20 +55,5 @@
   },
   "peerDependencies": {
     "typescript": "^5.3.3"
-  },
-  "release-it": {
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "conventionalcommits",
-        "infile": "CHANGELOG.md"
-      }
-    },
-    "github": {
-      "release": true,
-      "tokenRef": "GITHUB_AUTH"
-    },
-    "npm": {
-      "publish": false
-    }
   }
 }
