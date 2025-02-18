@@ -1,0 +1,27 @@
+name: Squid Types Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: Release Squid Types package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Authenticate with private NPM package
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Install dependencies
+        run: |
+          yarn install
+          yarn build
+
+      - name: Publish BETA to NPM
+        run: npx release-it --preRelease=beta --ci
