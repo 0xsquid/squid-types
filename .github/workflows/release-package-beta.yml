@@ -1,11 +1,11 @@
-name: Squid Types Release
+name: Squid Types Beta Release
 
 on:
   workflow_dispatch:
 
 jobs:
   release:
-    name: Release Squid Types package
+    name: Release Beta Squid Types package
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
