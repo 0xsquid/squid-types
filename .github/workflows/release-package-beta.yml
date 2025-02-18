@@ -1,9 +1,7 @@
 name: Squid Types Release
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   release:
@@ -23,5 +21,14 @@ jobs:
           yarn install
           yarn build
 
-      - name: Publish BETA to NPM
-        run: npx release-it --preRelease=beta --ci
+      - name: Bump version to beta
+        run: |
+          npm version prerelease --preid=beta
+          echo "New version: $(node -p "require('./package.json').version")"
+
+      - name: Publish Beta Release
+        id: publish
+        uses: JS-DevTools/npm-publish@v2
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          tag: beta
