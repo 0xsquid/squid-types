@@ -33,6 +33,7 @@ export interface OnChainExecutionData {
   requestId?: string;
   expiry?: string;
   expiryOffset?: string;
+  hasJitoTipFee?: boolean;
 }
 
 export interface ChainflipDepositAddressData {

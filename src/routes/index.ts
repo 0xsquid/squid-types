@@ -30,6 +30,9 @@ export interface RouteRequest {
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   bypassGuardrails?: boolean;
+  customParams?: {
+    jitoTipFeeInLamports?: string;
+  };
 }
 
 export interface RouteRequestPopulated {
@@ -48,6 +51,9 @@ export interface RouteRequestPopulated {
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   bypassGuardrails?: boolean;
+  customParams?: {
+    jitoTipFeeInLamports?: string;
+  };
 }
 
 export interface Estimate extends Omit<Route, "actions"> {
