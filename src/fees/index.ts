@@ -13,6 +13,7 @@ export enum FeeType {
 
 export enum GasCostType {
   EXECUTE_CALL = "executeCall",
+  JITO_TIP_FEE = "jitoTipFee",
 }
 
 export type FeeCost = {
