@@ -7,6 +7,15 @@ export enum ChainType {
   SOLANA = "solana",
 }
 
+export type JitoTipFee = {
+  landed_tips_25th_percentile: string;
+  landed_tips_50th_percentile: string;
+  landed_tips_75th_percentile: string;
+  landed_tips_95th_percentile: string;
+  landed_tips_99th_percentile: string;
+  ema_landed_tips_50th_percentile: string;
+};
+
 export type BaseChain = {
   chainId: string;
   chainType: ChainType;
@@ -40,6 +49,9 @@ export type BaseChain = {
     trmIdentifier: string;
   };
   boostSupported?: boolean;
+  gasFee?: {
+    jitoTipFee?: JitoTipFee;
+  };
 };
 
 export type EvmChain = BaseChain & {
@@ -71,6 +83,7 @@ export type CosmosChain = BaseChain & {
   coinType?: number;
   features?: string[];
   gasPriceStep?: CosmosGasType;
+  isEvmos?: boolean;
   chainToAxelarChannelId: string;
 };
 
