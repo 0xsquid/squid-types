@@ -5,6 +5,7 @@ export enum ChainType {
   COSMOS = "cosmos",
   BTC = "bitcoin",
   SOLANA = "solana",
+  SUI = "sui",
 }
 
 export type JitoTipFee = {
@@ -218,6 +219,9 @@ export enum ChainName {
 
   // SOL
   SOLANA = "solana",
+
+  // SUI
+  SUI = "sui",
 }
 
 export enum NetworkIdentifier {
@@ -317,6 +321,9 @@ export enum NetworkIdentifier {
 
   // SOL
   SOLANA = "solana",
+
+  // SUI
+  SUI = "sui",
 }
 
 export type ChainIBCInfo = {
