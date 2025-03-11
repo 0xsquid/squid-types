@@ -173,6 +173,13 @@ export interface CustomCallDetails {
   calls: ChainCall[];
 }
 
+export interface FillerAddresses {
+  evm: string;
+  cosmos: string;
+  solana: string;
+  sui: string;
+}
+
 export interface LiquidityProviderDetails {
   liquidityProvider: string;
   target: string;
@@ -181,7 +188,7 @@ export interface LiquidityProviderDetails {
   name: string;
   logoURI?: string;
   calls?: ChainCall[];
-  fillerAddress: string;
+  fillerAddresses: FillerAddresses;
   expiry: string;
 }
 
