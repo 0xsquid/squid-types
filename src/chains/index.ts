@@ -5,7 +5,17 @@ export enum ChainType {
   COSMOS = "cosmos",
   BTC = "bitcoin",
   SOLANA = "solana",
+  SUI = "sui",
 }
+
+export type JitoTipFee = {
+  landed_tips_25th_percentile: string;
+  landed_tips_50th_percentile: string;
+  landed_tips_75th_percentile: string;
+  landed_tips_95th_percentile: string;
+  landed_tips_99th_percentile: string;
+  ema_landed_tips_50th_percentile: string;
+};
 
 export type BaseChain = {
   chainId: string;
@@ -40,6 +50,9 @@ export type BaseChain = {
     trmIdentifier: string;
   };
   boostSupported?: boolean;
+  gasFee?: {
+    jitoTipFee?: JitoTipFee;
+  };
 };
 
 export type EvmChain = BaseChain & {
@@ -207,6 +220,9 @@ export enum ChainName {
 
   // SOL
   SOLANA = "solana",
+
+  // SUI
+  SUI = "sui",
 }
 
 export enum NetworkIdentifier {
@@ -307,6 +323,9 @@ export enum NetworkIdentifier {
 
   // SOL
   SOLANA = "solana",
+
+  // SUI
+  SUI = "sui",
 }
 
 export type ChainIBCInfo = {
