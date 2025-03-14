@@ -317,6 +317,7 @@ export enum NetworkIdentifier {
   SAGA_MARIA = "maria",
   SAGA_NIRVANA = "nirvana",
   ELYS = "elys",
+
   // BTC
   BITCOIN = "bitcoin",
 
