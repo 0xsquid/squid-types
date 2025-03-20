@@ -226,6 +226,7 @@ export enum ChainName {
 
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
+  SUI_TESTNET = "sui-testnet",
 }
 
 export enum NetworkIdentifier {
@@ -332,6 +333,7 @@ export enum NetworkIdentifier {
 
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
+  SUI_TESTNET = "sui-testnet",
 }
 
 export type ChainIBCInfo = {
