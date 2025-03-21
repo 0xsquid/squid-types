@@ -213,12 +213,20 @@ export enum ChainName {
   SAGA_DEX = "saga_evm",
   SAGA_MARIA = "maria",
   SAGA_NIRVANA = "nirvana",
+  ELYS = "elys",
 
   // BTC
   BITCOIN = "bitcoin",
 
   // SOL
   SOLANA = "solana",
+
+  // SUI
+  SUI = "sui",
+
+  // TESTNETS
+  ETHEREUM_SEPOLIA = "ethereum-sepolia",
+  SUI_TESTNET = "sui-testnet",
 }
 
 export enum NetworkIdentifier {
@@ -312,12 +320,20 @@ export enum NetworkIdentifier {
   SAGA_DEX = "saga_evm",
   SAGA_MARIA = "maria",
   SAGA_NIRVANA = "nirvana",
+  ELYS = "elys",
 
   // BTC
   BITCOIN = "bitcoin",
 
   // SOL
   SOLANA = "solana",
+
+  // SUI
+  SUI = "sui",
+
+  // TESTNETS
+  ETHEREUM_SEPOLIA = "ethereum-sepolia",
+  SUI_TESTNET = "sui-testnet",
 }
 
 export type ChainIBCInfo = {
