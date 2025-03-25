@@ -1,6 +1,6 @@
 import { Dex, DexName } from "../dexes";
 import { ChainData, ChainType } from "../chains";
-import { ActionType } from "../routes";
+import { ActionType, FillerAddresses } from "../routes";
 import { Token } from "../tokens";
 import { WrapperType } from "wrappers";
 import { BridgeType } from "bridges";
@@ -68,7 +68,7 @@ export interface ActionBaseData {
   // rfq
   provider: string;
   liquidityProvider: string;
-  fillerAddress: string;
+  fillerAddresses: FillerAddresses;
 }
 
 export interface PathAction {

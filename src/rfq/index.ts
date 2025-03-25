@@ -14,7 +14,8 @@ export enum HubEventType {
 export type Order = {
   fromAddress: string;
   toAddress: string;
-  filler: string;
+  fillerFrom: string;
+  fillerTo: string;
   fromToken: string;
   toToken: string;
   expiry: string;
