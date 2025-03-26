@@ -34,6 +34,7 @@ export interface OnChainExecutionData {
   expiry?: string;
   expiryOffset?: string;
   hasJitoTipFee?: boolean;
+  suiTx?: SuiCoralCall;
 }
 
 export interface ChainflipDepositAddressData {
@@ -55,7 +56,7 @@ export interface ChainflipDepositAddressData {
   };
 }
 
-export type ChainCall = EvmContractCall | CosmosCall;
+export type ChainCall = EvmContractCall | CosmosCall | SuiCoralCall;
 
 export interface EvmContractCall {
   chainType: ChainType.EVM;
@@ -190,4 +191,18 @@ export interface CosmosCctpCall {
     mintRecipient: string;
     burnToken: string;
   };
+}
+
+export interface SuiCoralCall {
+  chainType: ChainType.SUI;
+  coralID: string;
+  coralStateId: string;
+  coinType: string;
+  tx: any[];
+}
+
+export interface SuiTransaction {
+  target: string;
+  arguments: any[];
+  typeArguments: string[];
 }
