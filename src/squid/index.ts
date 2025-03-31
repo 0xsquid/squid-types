@@ -34,7 +34,6 @@ export interface OnChainExecutionData {
   expiry?: string;
   expiryOffset?: string;
   hasJitoTipFee?: boolean;
-  suiTx?: SuiCoralCall;
 }
 
 export interface ChainflipDepositAddressData {
@@ -198,11 +197,5 @@ export interface SuiCoralCall {
   coralID: string;
   coralStateId: string;
   coinType: string;
-  tx: any[];
-}
-
-export interface SuiTransaction {
-  target: string;
-  arguments: any[];
-  typeArguments: string[];
+  tx: string;
 }
