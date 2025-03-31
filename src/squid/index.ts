@@ -55,7 +55,7 @@ export interface ChainflipDepositAddressData {
   };
 }
 
-export type ChainCall = EvmContractCall | CosmosCall;
+export type ChainCall = EvmContractCall | CosmosCall | SuiCoralCall;
 
 export interface EvmContractCall {
   chainType: ChainType.EVM;
@@ -190,4 +190,12 @@ export interface CosmosCctpCall {
     mintRecipient: string;
     burnToken: string;
   };
+}
+
+export interface SuiCoralCall {
+  chainType: ChainType.SUI;
+  coralID: string;
+  coralStateId: string;
+  coinType: string;
+  tx: string;
 }
