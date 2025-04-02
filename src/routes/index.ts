@@ -302,6 +302,8 @@ export enum ActionStage {
   SOLANA_SOURCE,
   SOLANA_DESTINATION,
   SOLANA_ONLY,
+  SUI_SOURCE,
+  SUI_DESTINATION,
 }
 
 export interface StageContext {
