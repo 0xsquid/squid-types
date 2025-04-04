@@ -214,7 +214,7 @@ export enum ChainName {
   SAGA_MARIA = "maria",
   SAGA_NIRVANA = "nirvana",
   ELYS = "elys",
-
+  ALLORA = "allora",
   // BTC
   BITCOIN = "bitcoin",
 
@@ -317,6 +317,7 @@ export enum NetworkIdentifier {
   SAGA_MARIA = "maria",
   SAGA_NIRVANA = "nirvana",
   ELYS = "elys",
+  ALLORA = "allora",
 
   // BTC
   BITCOIN = "bitcoin",
