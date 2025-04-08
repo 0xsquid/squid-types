@@ -227,8 +227,8 @@ export enum ChainName {
   SUI = "sui",
 
   // XRPL
-  XRPL = "XRPL",
-  XRPL_EVM = "XRPL EVM",
+  XRPL = "xrpl",
+  XRPL_EVM = "xrpl-evm",
 
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
@@ -340,14 +340,14 @@ export enum NetworkIdentifier {
 
   // XRPL
   XRPL = "xrpl",
-  XRPL_EVM = "xrpl_evm",
+  XRPL_EVM = "xrpl-evm",
 
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
   SUI_TESTNET = "sui-testnet",
 
   XRPL_TESTNET = "xrpl-testnet",
-  XRPL_EVM_TESTNET= "xrpl_evm-testnet",
+  XRPL_EVM_TESTNET= "xrpl-evm-testnet",
 }
 
 export type ChainIBCInfo = {
