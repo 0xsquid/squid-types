@@ -2,8 +2,8 @@ import { Dex, DexName } from "../dexes";
 import { ChainData, ChainType } from "../chains";
 import { ActionType, FillerAddresses } from "../routes";
 import { Token } from "../tokens";
-import { WrapperType } from "wrappers";
-import { BridgeType } from "bridges";
+import { WrapperType } from "../wrappers";
+import { BridgeType } from "../bridges";
 
 export interface PathInternal {
   fromChain: string;
