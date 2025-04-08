@@ -1,4 +1,4 @@
-import { BridgeConfig } from "bridges";
+import { BridgeConfig } from "../bridges";
 
 export enum ChainType {
   EVM = "evm",
@@ -6,6 +6,7 @@ export enum ChainType {
   BTC = "bitcoin",
   SOLANA = "solana",
   SUI = "sui",
+  XRPL = "xrpl",
 }
 
 export type JitoTipFee = {
@@ -225,6 +226,10 @@ export enum ChainName {
   // SUI
   SUI = "sui",
 
+  // XRPL
+  XRPL = "xrpl",
+  XRPL_EVM = "xrpl-evm",
+
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
   SUI_TESTNET = "sui-testnet",
@@ -333,9 +338,16 @@ export enum NetworkIdentifier {
   // SUI
   SUI = "sui",
 
+  // XRPL
+  XRPL = "xrpl",
+  XRPL_EVM = "xrpl-evm",
+
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
   SUI_TESTNET = "sui-testnet",
+
+  XRPL_TESTNET = "xrpl-testnet",
+  XRPL_EVM_TESTNET= "xrpl-evm-testnet",
 }
 
 export type ChainIBCInfo = {
