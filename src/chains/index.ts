@@ -214,6 +214,9 @@ export enum ChainName {
   SAGA_DEX = "saga_evm",
   SAGA_MARIA = "maria",
   SAGA_NIRVANA = "nirvana",
+  SAGA_FLIPPANDO = "flippandomainnet",
+  SAGA_SOUNDMONEY = "soundmoney",
+  SAGA_NGMI = "ngmi",
   ELYS = "elys",
   ALLORA = "allora",
 
@@ -326,6 +329,9 @@ export enum NetworkIdentifier {
   SAGA_DEX = "saga_evm",
   SAGA_MARIA = "maria",
   SAGA_NIRVANA = "nirvana",
+  SAGA_FLIPPANDO = "flippandomainnet",
+  SAGA_SOUNDMONEY = "soundmoney",
+  SAGA_NGMI = "ngmi",
   ELYS = "elys",
   ALLORA = "allora",
 
