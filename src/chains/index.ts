@@ -218,6 +218,8 @@ export enum ChainName {
   SAGA_NGMI = "ngmi",
   ELYS = "elys",
   ALLORA = "allora",
+  BABYLON = "babylon",
+
   // BTC
   BITCOIN = "bitcoin",
 
@@ -324,6 +326,7 @@ export enum NetworkIdentifier {
   SAGA_NGMI = "ngmi",
   ELYS = "elys",
   ALLORA = "allora",
+  BABYLON = "babylon",
 
   // BTC
   BITCOIN = "bitcoin",
