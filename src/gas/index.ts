@@ -3,6 +3,7 @@ export interface FeeData {
   maxFeePerGas?: string;
   maxPriorityFeePerGas?: string;
   gasPrice: string;
+  itsTransferFee?: string;
 }
 
 export interface AxelarFeeData {
