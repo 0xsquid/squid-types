@@ -219,6 +219,7 @@ export enum ChainName {
   SAGA_NGMI = "ngmi",
   ELYS = "elys",
   ALLORA = "allora",
+  BABYLON = "babylon",
 
   // BTC
   BITCOIN = "bitcoin",
@@ -334,6 +335,7 @@ export enum NetworkIdentifier {
   SAGA_NGMI = "ngmi",
   ELYS = "elys",
   ALLORA = "allora",
+  BABYLON = "babylon",
 
   // BTC
   BITCOIN = "bitcoin",
@@ -353,7 +355,7 @@ export enum NetworkIdentifier {
   SUI_TESTNET = "sui-testnet",
 
   XRPL_TESTNET = "xrpl-testnet",
-  XRPL_EVM_TESTNET= "xrpl-evm-testnet",
+  XRPL_EVM_TESTNET = "xrpl-evm-testnet",
 }
 
 export type ChainIBCInfo = {
