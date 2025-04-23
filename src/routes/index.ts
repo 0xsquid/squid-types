@@ -188,7 +188,8 @@ export interface LiquidityProviderDetails {
   name: string;
   logoURI?: string;
   calls?: ChainCall[];
-  fillerAddresses: FillerAddresses;
+  fillerAddress?: string;
+  fillerAddresses?: FillerAddresses;
   expiry: string;
 }
 

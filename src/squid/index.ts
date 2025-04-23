@@ -193,9 +193,14 @@ export interface CosmosCctpCall {
 }
 
 export interface SuiCoralCall {
+  callType?: SuiCoralCallType;
   chainType: ChainType.SUI;
   coralID: string;
   coralStateId: string;
   coinType: string;
   tx: string;
+}
+
+export enum SuiCoralCallType {
+  DEFAULT = 0,
 }

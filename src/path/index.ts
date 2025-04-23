@@ -68,7 +68,8 @@ export interface ActionBaseData {
   // rfq
   provider: string;
   liquidityProvider: string;
-  fillerAddresses: FillerAddresses;
+  fillerAddress?: string;
+  fillerAddresses?: FillerAddresses;
 }
 
 export interface PathAction {
