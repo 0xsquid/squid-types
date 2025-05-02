@@ -12,6 +12,7 @@ export interface RouteResponse {
     estimate: Estimate;
     transactionRequest?: SquidData;
     params: RouteRequest;
+    quoteId: string;
   };
 }
 
