@@ -3,6 +3,9 @@ export interface FeeData {
   maxFeePerGas?: string;
   maxPriorityFeePerGas?: string;
   gasPrice: string;
+  // sui specific
+  createOrderFee?: string;
+  fillOrderFee?: string;
   itsTransferFee?: string;
 }
 
