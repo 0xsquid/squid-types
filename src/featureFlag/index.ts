@@ -6,6 +6,7 @@ export enum FeatureFlagType {
   Coral = "coral",
   ChainflipMultihop = "chainflipMultihop",
   SagaRoutes = "sagaRoutes",
+  BypassCompliance = "bypassCompliance",
 }
 
 export interface FeatureFlag {
