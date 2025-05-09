@@ -7,6 +7,8 @@ export interface FeeData {
   createOrderFee?: string;
   fillOrderFee?: string;
   itsTransferFee?: string;
+  // xrpl specific
+  baseReserve?: string;
 }
 
 export interface AxelarFeeData {
