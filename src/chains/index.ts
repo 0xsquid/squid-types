@@ -7,6 +7,7 @@ export enum ChainType {
   SOLANA = "solana",
   SUI = "sui",
   XRPL = "xrpl",
+  STELLAR = "stellar",
 }
 
 export type JitoTipFee = {
@@ -239,9 +240,13 @@ export enum ChainName {
   XRPL = "xrpl",
   XRPL_EVM = "xrpl-evm",
 
+  // STELLAR
+  STELLAR = "stellar",
+
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
   SUI_TESTNET = "sui-testnet",
+  STELLAR_TESTNET = "stellar-testnet",
 }
 
 export enum NetworkIdentifier {
@@ -360,12 +365,17 @@ export enum NetworkIdentifier {
   XRPL = "xrpl",
   XRPL_EVM = "xrpl-evm",
 
+  // STELLAR
+  STELLAR = "stellar",
+
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
   SUI_TESTNET = "sui-testnet",
 
   XRPL_TESTNET = "xrpl-testnet",
   XRPL_EVM_TESTNET = "xrpl-evm-testnet",
+
+  STELLAR_TESTNET = "stellar-testnet",
 }
 
 export type ChainIBCInfo = {
