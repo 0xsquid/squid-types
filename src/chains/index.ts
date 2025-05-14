@@ -144,6 +144,11 @@ export enum ChainName {
   BLAST = "blast",
   FRAXTAL = "fraxtal",
   BERACHAIN = "berachain",
+  GNOSIS = "gnosis",
+  SONIC = "sonic",
+  SONEIUM = "soneium",
+  PEAQ = "peaq",
+  HYPER_EVM = "hyper-evm",
 
   // Cosmos
   AGORIC = "agoric",
@@ -261,6 +266,11 @@ export enum NetworkIdentifier {
   BLAST = "blast",
   FRAXTAL = "fraxtal",
   BERACHAIN = "berachain",
+  GNOSIS = "gnosis",
+  SONIC = "sonic",
+  SONEIUM = "soneium",
+  PEAQ = "peaq",
+  HYPER_EVM = "hyper-evm",
 
   // COSMOS
   AGORIC = "agoric",
