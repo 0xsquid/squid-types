@@ -307,7 +307,9 @@ export enum ActionStage {
   SUI_SOURCE,
   SUI_DESTINATION,
   XRPL_SOURCE,
-  XRPL_DESTINATION
+  XRPL_DESTINATION,
+  STELLAR_SOURCE,
+  STELLAR_DESTINATION
 }
 
 export interface StageContext {
