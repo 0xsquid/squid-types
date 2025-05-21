@@ -11,6 +11,12 @@ export enum HubEventType {
   SETTLEMENT_PROCESSED = "SettlementProcessed",
 }
 
+export enum CoralMessageProvider {
+  UNSUPPORTED = "Unsupported",
+  AXELAR = "Axelar",
+  LAYER_ZERO = "LayerZero",
+}
+
 export type Order = {
   fromAddress: string;
   toAddress: string;
