@@ -40,6 +40,7 @@ export enum DexName {
   NILE_V3 = "Nile V3",
   OPENOCEAN = "OpenOcean",
   OSMOSIS = "Osmosis",
+  OKU_V3 = "Oku V3",
   PANCAKESWAP_V2 = "Pancakeswap V2",
   PANCAKESWAP_V3 = "Pancakeswap V3",
   PANCAKESWAP_STABLE = "Pancakeswap Stable",
