@@ -192,6 +192,7 @@ export interface LiquidityProviderDetails {
   fillerAddress?: string;
   fillerAddresses?: FillerAddresses;
   expiry: string;
+  estimatedDuration?: string;
 }
 
 export interface Integrator {
@@ -309,7 +310,7 @@ export enum ActionStage {
   XRPL_SOURCE,
   XRPL_DESTINATION,
   STELLAR_SOURCE,
-  STELLAR_DESTINATION
+  STELLAR_DESTINATION,
 }
 
 export interface StageContext {
