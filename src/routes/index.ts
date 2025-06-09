@@ -192,7 +192,7 @@ export interface LiquidityProviderDetails {
   fillerAddress?: string;
   fillerAddresses?: FillerAddresses;
   expiry: string;
-  estimatedDuration?: string;
+  estimatedFillDuration?: number;
 }
 
 export interface Integrator {
