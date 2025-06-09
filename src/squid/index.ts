@@ -1,6 +1,11 @@
 import { ChainType } from "../chains";
 import Long from "long";
 
+export enum SquidDataType {
+  OnChainExecution = "ON_CHAIN_EXECUTION",
+  ChainflipDepositAddress = "CHAINFLIP_DEPOSIT_ADDRESS",
+}
+
 export enum SquidRouteType {
   CALL_BRIDGE_CALL = "CALL_BRIDGE_CALL",
   CALL_BRIDGE = "CALL_BRIDGE",
@@ -11,11 +16,6 @@ export enum SquidRouteType {
   SOLANA_ONLY = "SOLANA_ONLY",
   RFQ = "RFQ",
   FUND_AND_RUN_MULTICALL = "FUND_AND_RUN_MULTICALL",
-}
-
-export enum SquidDataType {
-  OnChainExecution = "ON_CHAIN_EXECUTION",
-  ChainflipDepositAddress = "CHAINFLIP_DEPOSIT_ADDRESS",
 }
 
 export type SquidData = OnChainExecutionData | ChainflipDepositAddressData;
