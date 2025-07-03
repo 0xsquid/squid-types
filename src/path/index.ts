@@ -91,5 +91,5 @@ export interface PathParams {
   fromToken: string;
   toToken: string;
   amountInUsd: number;
-  tokenAmount: number;
+  includeCoralPaths?: boolean;
 }
