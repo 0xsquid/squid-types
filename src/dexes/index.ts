@@ -33,6 +33,7 @@ export enum DexName {
   HORIZON_V3 = "Horizon V3",
   KYBERSWAP = "KyberSwap",
   KYBERSWAP_AGGREGATOR = "kyberswap Aggregator",
+  KYO_V3 = "Kyo V3",
   KINETIX_V3 = "Kinetix V3",
   LYNEX_V3 = "Lynex V3",
   MENTO_V2 = "Mento V2",
