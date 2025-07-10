@@ -1,4 +1,10 @@
 import { ChainType } from "../chains";
+import Long from "long";
+
+export enum SquidDataType {
+  OnChainExecution = "ON_CHAIN_EXECUTION",
+  ChainflipDepositAddress = "CHAINFLIP_DEPOSIT_ADDRESS",
+}
 
 export enum SquidRouteType {
   CALL_BRIDGE_CALL = "CALL_BRIDGE_CALL",
@@ -7,9 +13,15 @@ export enum SquidRouteType {
   BRIDGE = "BRIDGE",
   EVM_ONLY = "EVM_ONLY",
   COSMOS_ONLY = "COSMOS_ONLY",
+  SOLANA_ONLY = "SOLANA_ONLY",
+  RFQ = "RFQ",
+  FUND_AND_RUN_MULTICALL = "FUND_AND_RUN_MULTICALL",
 }
 
-export interface SquidData {
+export type SquidData = OnChainExecutionData | ChainflipDepositAddressData;
+
+export interface OnChainExecutionData {
+  type: SquidDataType;
   routeType: SquidRouteType;
   target: string;
   data: string;
@@ -18,9 +30,32 @@ export interface SquidData {
   gasPrice?: string;
   maxFeePerGas?: string;
   maxPriorityFeePerGas?: string;
+  requestId?: string;
+  expiry?: string;
+  expiryOffset?: string;
+  hasJitoTipFee?: boolean;
 }
 
-export type ChainCall = EvmContractCall | CosmosCall;
+export interface ChainflipDepositAddressData {
+  type: SquidDataType;
+  request: {
+    quote: any;
+    amount: string;
+    fromAddress?: string;
+    toAddress: string;
+    ccmParams?: {
+      message: string;
+      gasBudget: string;
+    };
+    fillOrKillParams: {
+      minPrice: string;
+      refundAddress: string;
+      retryDurationBlocks: number;
+    };
+  };
+}
+
+export type ChainCall = EvmContractCall | CosmosCall | SuiCoralCall;
 
 export interface EvmContractCall {
   chainType: ChainType.EVM;
@@ -155,4 +190,17 @@ export interface CosmosCctpCall {
     mintRecipient: string;
     burnToken: string;
   };
+}
+
+export interface SuiCoralCall {
+  callType?: SuiCoralCallType;
+  chainType: ChainType.SUI;
+  coralID: string;
+  coralStateId: string;
+  coinType: string;
+  tx: string;
+}
+
+export enum SuiCoralCallType {
+  DEFAULT = 0,
 }

@@ -1,6 +1,6 @@
 {
   "name": "@0xsquid/squid-types",
-  "version": "0.1.73",
+  "version": "0.1.169",
   "description": "JS and TS types relating to 0xsquid related projects.",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,11 +15,7 @@
     "clean": "rimraf dist node_modules",
     "lint": "eslint src/ --ext .js,.ts,.json",
     "lint:fix": "yarn lint --fix",
-    "format": "prettier --ignore-path .gitignore --write --log-level error \"**/*.+(js|ts|json)\"",
-    "release": "release-it",
-    "release:pre": "release-it --preRelease=beta",
-    "release:ci": "release-it --ci",
-    "release:dry": "release-it --dry-run"
+    "format": "prettier --ignore-path .gitignore --write --log-level error \"**/*.+(js|ts|json)\""
   },
   "repository": {
     "type": "git",
@@ -37,11 +33,10 @@
   "author": "0xsquid",
   "license": "Apache-2.0",
   "directories": {
-    "typescript": "^4.9.5"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@axelar-network/axelarjs-sdk": "^0.13.6",
-    "@ethersproject/providers": "^5.7.2",
+    "long": "^5.2.4",
     "typescript": "*"
   },
   "devDependencies": {
@@ -60,20 +55,5 @@
   },
   "peerDependencies": {
     "typescript": "^5.3.3"
-  },
-  "release-it": {
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "conventionalcommits",
-        "infile": "CHANGELOG.md"
-      }
-    },
-    "github": {
-      "release": true,
-      "tokenRef": "GITHUB_AUTH"
-    },
-    "npm": {
-      "publish": false
-    }
   }
 }

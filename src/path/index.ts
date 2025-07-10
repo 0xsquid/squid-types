@@ -1,9 +1,9 @@
 import { Dex, DexName } from "../dexes";
 import { ChainData, ChainType } from "../chains";
-import { ActionType } from "../routes";
+import { ActionType, FillerAddresses } from "../routes";
 import { Token } from "../tokens";
-import { WrapperType } from "wrappers";
-import { BridgeType } from "bridges";
+import { WrapperType } from "../wrappers";
+import { BridgeType } from "../bridges";
 
 export interface PathInternal {
   fromChain: string;
@@ -11,6 +11,7 @@ export interface PathInternal {
   toChain: string;
   toToken: string;
   actions: PathActionInternal[];
+  graph?: boolean;
 }
 
 export interface Path {
@@ -19,6 +20,7 @@ export interface Path {
   toChain: ChainData;
   toToken: Token;
   actions: PathAction[];
+  graph?: boolean;
 }
 
 export interface PathActionInternal {
@@ -29,6 +31,7 @@ export interface PathActionInternal {
   fromToken: string;
   toToken: string;
   data: Record<string, any>;
+  graph?: boolean;
 }
 
 export interface Buckets {
@@ -55,6 +58,7 @@ export interface ActionBaseData {
   }[];
   buckets: Buckets;
   tickSpacing: number;
+  binStep: number;
 
   // wrappers
   address: string;
@@ -63,7 +67,12 @@ export interface ActionBaseData {
 
   // bridges
   name: string;
+
+  // rfq
   provider: string;
+  liquidityProvider: string;
+  fillerAddress?: string;
+  fillerAddresses?: FillerAddresses;
 }
 
 export interface PathAction {
@@ -79,8 +88,9 @@ export interface PathAction {
 export interface PathParams {
   fromChainId: string;
   toChainId: string;
-  fromToken: Pick<Token, "type" | "chainId" | "name" | "symbol" | "decimals" | "address">;
-  toToken: Pick<Token, "type" | "chainId" | "name" | "symbol" | "decimals" | "address">;
-  maxResults?: number;
-  subgraphIds?: string[];
+  fromToken: string;
+  toToken: string;
+  amountInUsd: number;
+  tokenAmount: number;
+  includeCoralPaths?: boolean;
 }

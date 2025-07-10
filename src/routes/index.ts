@@ -3,7 +3,7 @@ import { Dex, DexName } from "../dexes";
 import { FeeCost, GasCost } from "../fees";
 import { QuoteAction } from "../quote";
 import { ChainCall, SquidData } from "../squid";
-import { Token } from "../tokens";
+import { Token, Volatility } from "../tokens";
 import { WrapDirection, WrapperType } from "../wrappers";
 import { BridgeType } from "../bridges";
 
@@ -12,6 +12,7 @@ export interface RouteResponse {
     estimate: Estimate;
     transactionRequest?: SquidData;
     params: RouteRequest;
+    quoteId: string;
   };
 }
 
@@ -23,16 +24,16 @@ export interface RouteRequest {
   toChain: string;
   toToken: string;
   toAddress?: string;
-  slippage: number;
+  slippage?: number;
   quoteOnly?: boolean;
-  enableBoost?: boolean;
   preHook?: Hook;
   postHook?: Omit<Hook, "fundAmount" | "fundToken">;
-  prefer?: DexName[];
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   bypassGuardrails?: boolean;
-  onChainQuoting?: boolean;
+  customParams?: {
+    jitoTipFeeInLamports?: string;
+  };
 }
 
 export interface RouteRequestPopulated {
@@ -48,11 +49,12 @@ export interface RouteRequestPopulated {
   enableBoost?: boolean;
   preHook?: Hook;
   postHook?: Omit<Hook, "fundAmount" | "fundToken">;
-  prefer?: DexName[];
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
-  onChainQuoting?: boolean;
   bypassGuardrails?: boolean;
+  customParams?: {
+    jitoTipFeeInLamports?: string;
+  };
 }
 
 export interface Estimate extends Omit<Route, "actions"> {
@@ -66,7 +68,6 @@ export interface Route {
   fromAmount: string;
   toAmount: string;
   toAmountMin: string;
-  sendAmount: string;
   exchangeRate: string;
   aggregatePriceImpact: string;
   estimatedRouteDuration: number;
@@ -81,14 +82,28 @@ export interface Route {
 export interface RouteActionResponse extends Omit<RouteAction, "fromChain" | "toChain" | "data"> {
   fromChain: string;
   toChain: string;
-  data: _SwapDetails | WrapDetails | BridgeDetails | CustomCallDetails;
+  data:
+    | _SwapDetails
+    | WrapDetails
+    | BridgeDetails
+    | CustomCallDetails
+    | FeeDetails
+    | LiquidityProviderDetails;
 }
 
 export interface RouteAction extends QuoteAction {
   provider?: string;
   description?: string;
   logoURI?: string;
-  data: SwapDetails | WrapDetails | BridgeDetails | CustomCallDetails;
+  estimatedDuration?: number;
+  orderHash?: string;
+  data:
+    | SwapDetails
+    | WrapDetails
+    | BridgeDetails
+    | CustomCallDetails
+    | FeeDetails
+    | LiquidityProviderDetails;
 }
 
 export enum ActionType {
@@ -97,6 +112,8 @@ export enum ActionType {
   BRIDGE = "bridge",
   IBC_TRANSFER = "ibc-transfer",
   CUSTOM = "custom",
+  FEE = "fee",
+  RFQ = "rfq",
 }
 
 export interface WrapDetails {
@@ -109,6 +126,9 @@ export interface WrapDetails {
   direction: WrapDirection;
   calls: ChainCall[];
   custom?: Record<string, any>;
+  logoURI?: string;
+  name?: string;
+  provider?: string;
 }
 
 export interface _SwapDetails extends Omit<SwapDetails, "dex"> {
@@ -123,6 +143,7 @@ export interface SwapDetails {
   poolId: string;
   poolFee: string;
   tickSpacing: number;
+  binStep: number;
   osmosisPools: {
     poolId: string;
     tokenOutDenom: string;
@@ -133,6 +154,8 @@ export interface SwapDetails {
   exchangeProvider?: string;
   address?: string;
   custom?: Record<string, any>;
+  logoURI?: string;
+  provider?: string;
 }
 
 export interface BridgeDetails {
@@ -140,12 +163,117 @@ export interface BridgeDetails {
   provider: string;
   type: BridgeType;
   name: string;
+  logoURI?: string;
   calls?: ChainCall[];
 }
 
 export interface CustomCallDetails {
   name: string;
+  logoURI?: string;
+  provider?: string;
   calls: ChainCall[];
+}
+
+export interface FillerAddresses {
+  evm: string;
+  cosmos: string;
+  solana: string;
+  sui: string;
+}
+
+export interface LiquidityProviderDetails {
+  liquidityProvider: string;
+  target: string;
+  provider: string;
+  type: BridgeType;
+  name: string;
+  logoURI?: string;
+  calls?: ChainCall[];
+  fillerAddress?: string;
+  fillerAddresses?: FillerAddresses;
+  expiry: string;
+  estimatedFillDuration?: number;
+}
+
+export interface Integrator {
+  id: string;
+  enabled: boolean;
+}
+
+export enum FEES_ENUM {
+  PLATFORM = "PLATFORM",
+  INTEGRATOR = "INTEGRATOR",
+  CHAIN = "CHAIN",
+  TOKEN = "TOKEN",
+  TIER = "TIER",
+}
+
+export interface PlatformFee {
+  type: FEES_ENUM.PLATFORM;
+  flat: number;
+  percentage: number;
+  enabled: boolean;
+  address: string;
+}
+
+export interface IntegratorFee {
+  type: FEES_ENUM.INTEGRATOR;
+  flat: number;
+  percentage: number;
+  flat2?: number;
+  percentage2?: number;
+  squidFlat: number;
+  squidPercentage: number;
+  enabled: boolean;
+  waivePlatformFee: boolean;
+  address: string;
+  address2?: string;
+  integrator?: Integrator;
+}
+
+export interface ChainFee {
+  type: FEES_ENUM.CHAIN;
+  flat: number;
+  percentage: number;
+  enabled: boolean;
+  waivePlatformFee: boolean;
+  chain?: ChainData;
+}
+
+export interface TokenFee {
+  type: FEES_ENUM.TOKEN;
+  flat: number;
+  percentage: number;
+  enabled: boolean;
+  waivePlatformFee: boolean;
+  token?: Token;
+}
+
+export interface TierFee {
+  type: FEES_ENUM.TIER;
+  tier: Volatility;
+  flat: number;
+  percentage: number;
+  enabled: boolean;
+  waivePlatformFee: boolean;
+}
+
+export interface FeeDetails {
+  calls?: ChainCall[];
+  platformFee: PlatformFee;
+  integratorFee: IntegratorFee;
+  chainFee: ChainFee;
+  tokenFee: TokenFee;
+  tierFee: TierFee;
+  totalFeeAmount: bigint;
+  platformFeeAmount: bigint;
+  integratorFeeAmount: bigint;
+  integratorFee2Amount: bigint;
+  squidFeeAmount: bigint;
+  chainFeeAmount: bigint;
+  tokenFeeAmount: bigint;
+  tierFeeAmount: bigint;
+  logoURI: string;
 }
 
 export interface Hook {
@@ -172,6 +300,17 @@ export enum ActionStage {
   COSMOS_DESTINATION,
   COSMOS_TRANSIENT,
   COSMOS_ONLY,
+  BTC_SOURCE,
+  BTC_DESTINATION,
+  SOLANA_SOURCE,
+  SOLANA_DESTINATION,
+  SOLANA_ONLY,
+  SUI_SOURCE,
+  SUI_DESTINATION,
+  XRPL_SOURCE,
+  XRPL_DESTINATION,
+  STELLAR_SOURCE,
+  STELLAR_DESTINATION,
 }
 
 export interface StageContext {

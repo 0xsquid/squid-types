@@ -1,9 +1,23 @@
-import { BridgeConfig } from "bridges";
+import { BridgeConfig } from "../bridges";
 
 export enum ChainType {
   EVM = "evm",
   COSMOS = "cosmos",
+  BTC = "bitcoin",
+  SOLANA = "solana",
+  SUI = "sui",
+  XRPL = "xrpl",
+  STELLAR = "stellar",
 }
+
+export type JitoTipFee = {
+  landed_tips_25th_percentile: string;
+  landed_tips_50th_percentile: string;
+  landed_tips_75th_percentile: string;
+  landed_tips_95th_percentile: string;
+  landed_tips_99th_percentile: string;
+  ema_landed_tips_50th_percentile: string;
+};
 
 export type BaseChain = {
   chainId: string;
@@ -16,8 +30,6 @@ export type BaseChain = {
   chainIconURI: string;
   blockExplorerUrls: string[];
   enableBoostByDefault: boolean;
-  estimatedRouteDuration: number;
-  estimatedBoostRouteDuration: number;
   swapAmountForGas: string;
   sameChainSwapsSupported: boolean;
   interchainService?: string;
@@ -39,6 +51,10 @@ export type BaseChain = {
   compliance?: {
     trmIdentifier: string;
   };
+  boostSupported?: boolean;
+  gasFee?: {
+    jitoTipFee?: JitoTipFee;
+  };
 };
 
 export type EvmChain = BaseChain & {
@@ -58,6 +74,7 @@ export type EvmChain = BaseChain & {
 
 export type CosmosChain = BaseChain & {
   rest: string;
+  rpcList: string[];
   stakeCurrency: CosmosCurrency;
   walletUrl?: string;
   walletUrlForStaking?: string;
@@ -69,6 +86,7 @@ export type CosmosChain = BaseChain & {
   coinType?: number;
   features?: string[];
   gasPriceStep?: CosmosGasType;
+  isEvmos?: boolean;
   chainToAxelarChannelId: string;
 };
 
@@ -99,7 +117,7 @@ export type CosmosGasType = {
   high: number;
 };
 
-export type ChainData = EvmChain | CosmosChain;
+export type ChainData = BaseChain | EvmChain | CosmosChain;
 
 export enum ChainName {
   ARBITRUM = "Arbitrum",
@@ -115,6 +133,7 @@ export enum ChainName {
   FANTOM = "Fantom",
   FILECOIN = "filecoin",
   FILECOIN2 = "filecoin-2", //testnet
+  IMMUTABLE_ZKEVM = "immutable",
   KAVA = "kava",
   MANTLE = "mantle",
   MOONBEAM = "Moonbeam",
@@ -125,35 +144,109 @@ export enum ChainName {
   SCROLL = "scroll",
   BLAST = "blast",
   FRAXTAL = "fraxtal",
+  BERACHAIN = "berachain",
+  GNOSIS = "gnosis",
+  SONIC = "sonic",
+  SONEIUM = "soneium",
+  PEAQ = "peaq",
+  HYPER_EVM = "hyper-evm",
 
   // Cosmos
   AGORIC = "agoric",
   ASSETMANTLE = "assetmantle",
-  AURA = "aura",
   AXELARNET = "axelarnet",
   CARBON = "carbon",
   COMDEX = "comdex",
   COSMOS = "cosmoshub",
   CRESCENT = "crescent",
-  EMONEY = "e-money",
   EVMOS = "evmos",
   FETCH = "fetch",
   INJECTIVE = "injective",
   JUNO = "juno",
   KI = "ki",
   KUJIRA = "kujira",
+  NEUTRON = "neutron",
   NOBLE = "noble",
   OSMOSIS = "osmosis",
   OSMOSIS7 = "osmosis-7", //testnet
   REGEN = "regen",
   SEI = "sei",
-  SECRET = "secret", //deprecated
   SECRETSNIP = "secret-snip",
   STARGAZE = "stargaze",
   STRIDE = "stride",
   TERRA2 = "terra-2",
   UMEE = "umee",
   DYDX = "dydx",
+  ACRECHAIN = "acre",
+  ARCHWAY = "archway",
+  BITCANNA = "bitcanna",
+  BITSONG = "bitsong",
+  CHEQD = "cheqd",
+  CELESTIA = "celestia",
+  COREUM = "coreum",
+  DECENTR = "decentr",
+  DESMOS = "desmos",
+  DIG = "dig",
+  DYMENSION = "dymension",
+  IRISNET = "irisnet",
+  IXO = "impacthub",
+  JACKAL = "jackal",
+  LUM = "lumnetwork",
+  LIKECOIN = "likecoin",
+  KAVA_IBC = "kava-ibc",
+  NOLUS = "nolus",
+  XPLA = "xpla", // disabled on V1
+  AKASH = "akash",
+  CHIHUAHUA = "chihuahua",
+  CRONOS = "cronos",
+  GRAVITYBRIDGE = "gravitybridge",
+  MARS = "mars",
+  MIGALOO = "migaloo",
+  PERSISTENCE = "persistence",
+  OMNIFLIXHUB = "omniflixhub",
+  QUICKSILVER = "quicksilver",
+  SOMMELIER = "sommelier",
+  TERRA = "terra",
+  TERITORI = "teritori",
+  SENTINEL = "sentinel",
+  HUMANS = "humans",
+  CHAIN4ENERGY = "c4e",
+  SAGA = "saga",
+  NIBIRU = "nibiru",
+  LAVA = "lava",
+  KYVE = "kyve",
+  XION = "xion",
+  SAGA_HUB = "hub",
+  SAGA_DEX = "saga_evm",
+  SAGA_MARIA = "maria",
+  SAGA_NIRVANA = "nirvana",
+  SAGA_FLIPPANDO = "flippandomainnet",
+  SAGA_SOUNDMONEY = "soundmoney",
+  SAGA_NGMI = "ngmi",
+  ELYS = "elys",
+  ALLORA = "allora",
+  BABYLON = "babylon",
+
+  // BTC
+  BITCOIN = "bitcoin",
+
+  // SOL
+  SOLANA = "solana",
+
+  // SUI
+  SUI = "sui",
+
+  // XRPL
+  XRPL = "xrpl",
+  XRPL_EVM = "xrpl-evm",
+
+  // STELLAR
+  STELLAR = "stellar",
+
+  // TESTNETS
+  ETHEREUM_SEPOLIA = "ethereum-sepolia",
+  SUI_TESTNET = "sui-testnet",
+  STELLAR_TESTNET = "stellar-testnet",
 }
 
 export enum NetworkIdentifier {
@@ -167,6 +260,7 @@ export enum NetworkIdentifier {
   CELO = "celo",
   FANTOM = "fantom",
   FILECOIN = "filecoin",
+  IMMUTABLE_ZKEVM = "immutable",
   KAVA = "kava",
   MANTLE = "mantle",
   MOONBEAM = "moonbeam",
@@ -176,18 +270,22 @@ export enum NetworkIdentifier {
   SCROLL = "scroll",
   BLAST = "blast",
   FRAXTAL = "fraxtal",
+  BERACHAIN = "berachain",
+  GNOSIS = "gnosis",
+  SONIC = "sonic",
+  SONEIUM = "soneium",
+  PEAQ = "peaq",
+  HYPER_EVM = "hyper-evm",
 
   // COSMOS
   AGORIC = "agoric",
   ASSETMANTLE = "assetmantle",
-  AURA = "aura",
   AXELAR = "axelar",
   AXELARNET = "axelarnet",
   CARBON = "carbon",
   COMDEX = "comdex",
   COSMOS = "cosmoshub",
   CRESCENT = "crescent",
-  EMONEY = "e-money",
   EVMOS = "evmos",
   FETCH = "fetch",
   INJECTIVE = "injective",
@@ -195,16 +293,89 @@ export enum NetworkIdentifier {
   KI = "ki",
   KUJIRA = "kujira",
   NOBLE = "noble",
+  NEUTRON = "neutron",
   OSMOSIS = "osmosis",
   REGEN = "regen",
   SEI = "sei",
-  SECRET = "secret", //deprecated
   SECRETSNIP = "secret-snip",
   STARGAZE = "stargaze",
   STRIDE = "stride",
   TERRA2 = "terra-2",
   UMEE = "umee",
   DYDX = "dydx",
+  ACRECHAIN = "acre",
+  ARCHWAY = "archway",
+  BITCANNA = "bitcanna",
+  BITSONG = "bitsong",
+  CHEQD = "cheqd",
+  CELESTIA = "celestia",
+  COREUM = "coreum",
+  DECENTR = "decentr",
+  DESMOS = "desmos",
+  DYMENSION = "dymension",
+  IRISNET = "irisnet",
+  IXO = "impacthub",
+  JACKAL = "jackal",
+  LUM = "lumnetwork",
+  LIKECOIN = "likecoin",
+  KAVA_IBC = "kava-ibc",
+  NOLUS = "nolus",
+  XPLA = "xpla", // disabled on V1
+  AKASH = "akash",
+  CHIHUAHUA = "chihuahua",
+  CRONOS = "cronos",
+  GRAVITYBRIDGE = "gravitybridge",
+  MARS = "mars",
+  MIGALOO = "migaloo",
+  PERSISTENCE = "persistence",
+  OMNIFLIXHUB = "omniflixhub",
+  QUICKSILVER = "quicksilver",
+  SOMMELIER = "sommelier",
+  TERRA = "terra",
+  TERITORI = "teritori",
+  SENTINEL = "sentinel",
+  HUMANS = "humans",
+  CHAIN4ENERGY = "c4e",
+  SAGA = "saga",
+  NIBIRU = "nibiru",
+  LAVA = "lava",
+  KYVE = "kyve",
+  XION = "xion",
+  SAGA_HUB = "hub",
+  SAGA_DEX = "saga_evm",
+  SAGA_MARIA = "maria",
+  SAGA_NIRVANA = "nirvana",
+  SAGA_FLIPPANDO = "flippandomainnet",
+  SAGA_SOUNDMONEY = "soundmoney",
+  SAGA_NGMI = "ngmi",
+  ELYS = "elys",
+  ALLORA = "allora",
+  BABYLON = "babylon",
+
+  // BTC
+  BITCOIN = "bitcoin",
+
+  // SOL
+  SOLANA = "solana",
+
+  // SUI
+  SUI = "sui",
+
+  // XRPL
+  XRPL = "xrpl",
+  XRPL_EVM = "xrpl-evm",
+
+  // STELLAR
+  STELLAR = "stellar",
+
+  // TESTNETS
+  ETHEREUM_SEPOLIA = "ethereum-sepolia",
+  SUI_TESTNET = "sui-testnet",
+
+  XRPL_TESTNET = "xrpl-testnet",
+  XRPL_EVM_TESTNET = "xrpl-evm-testnet",
+
+  STELLAR_TESTNET = "stellar-testnet",
 }
 
 export type ChainIBCInfo = {
