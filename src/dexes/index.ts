@@ -38,6 +38,7 @@ export enum DexName {
   KYO_V2 = "Kyo V2",
   KYO_V3 = "Kyo V3",
   KINETIX_V3 = "Kinetix V3",
+  KODIAK_V3 = "Kodiak V3",
   LYNEX_V3 = "Lynex V3",
   MENTO_V2 = "Mento V2",
   NILE_SOLIDLY = "Nile Solidly",
