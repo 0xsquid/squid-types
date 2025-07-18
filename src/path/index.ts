@@ -11,7 +11,7 @@ export interface PathInternal {
   toChain: string;
   toToken: string;
   actions: PathActionInternal[];
-  graph?: boolean;
+  graph?: string;
 }
 
 export interface Path {
