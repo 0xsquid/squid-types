@@ -20,7 +20,7 @@ export interface Path {
   toChain: ChainData;
   toToken: Token;
   actions: PathAction[];
-  graph?: boolean;
+  graph?: string;
 }
 
 export interface PathActionInternal {
@@ -31,7 +31,7 @@ export interface PathActionInternal {
   fromToken: string;
   toToken: string;
   data: Record<string, any>;
-  graph?: boolean;
+  graph?: string;
 }
 
 export interface Buckets {
