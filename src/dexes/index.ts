@@ -72,6 +72,7 @@ export enum DexName {
   SYNTHSWAP_V2 = "SynthSwap V2",
   SYNTHSWAP_V3 = "SynthSwap V3",
   SKYDROME = "Skydrome",
+  SWAPR_V3 = "Swapr V3",
   THENA_SOLIDLY = "Thena Solidly",
   THENA_V3 = "Thena V3",
   TRADERJOE_V2 = "Trader Joe V2",
