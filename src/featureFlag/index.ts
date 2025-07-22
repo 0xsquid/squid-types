@@ -8,6 +8,7 @@ export enum FeatureFlagType {
   SagaRoutes = "sagaRoutes",
   BypassCompliance = "bypassCompliance",
   Ripple = "ripple",
+  Megabridge = "megabridge",
 }
 
 export interface FeatureFlag {
