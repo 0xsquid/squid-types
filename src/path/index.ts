@@ -92,6 +92,5 @@ export interface PathParams {
   toToken: string;
   amountInUsd: number;
   tokenAmount: number;
-  canAccessMegabridge?: boolean;
   includeCoralPaths?: boolean;
 }
