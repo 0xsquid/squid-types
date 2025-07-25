@@ -9,6 +9,7 @@ export enum FeatureFlagType {
   BypassCompliance = "bypassCompliance",
   Ripple = "ripple",
   Megabridge = "megabridge",
+  Stellar = "stellar",
 }
 
 export interface FeatureFlag {
