@@ -73,6 +73,7 @@ export enum DexName {
   SPOOKYSWAP_V2 = "Spookyswap V2",
   STELLASWAP_V2 = "Stellaswap V2",
   STELLASWAP_V3 = "Stellaswap V3",
+  STELLASWAP_V4 = "Stellaswap V4",
   STELLASWAP_SADDLE = "Stellaswap Saddle",
   SUSHISWAP_V2 = "Sushiswap V2",
   SUSHISWAP_V3 = "Sushiswap V3",
