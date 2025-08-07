@@ -7,6 +7,7 @@ export enum BridgeType {
   CHAINFLIP = "chainflip",
   RFQ = "rfq",
   ITB = "immutable-token-bridge",
+  CORAL_V2 = "coral-v2",
 }
 
 export enum BridgeProvider {
@@ -18,6 +19,7 @@ export enum BridgeProvider {
   CHAINFLIP = "Chainflip",
   RFQ = "CORAL",
   IMMUTABLE = "Immutable",
+  CORAL_V2 = "CORAL V2",
 }
 
 export type BridgeConfig = Record<string, string>;
