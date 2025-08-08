@@ -35,7 +35,6 @@ export interface OnChainExecutionData {
   expiry?: string;
   expiryOffset?: string;
   hasJitoTipFee?: boolean;
-  coralV2?: boolean;
 }
 
 export interface ChainflipDepositAddressData {
