@@ -21,6 +21,7 @@ export enum DexName {
   BEAMSWAP_V3 = "Beamswap V3",
   BEAMSWAP_SADDLE = "Beamswap Saddle",
   BEETS_V2 = "Beets V2",
+  CAMELOT_V2 = "Camelot V2",
   CAMELOT_V3 = "Camelot V3",
   CURVE_V2 = "Curve V2",
   ELLIPSIS = "Ellipsis",
@@ -48,7 +49,9 @@ export enum DexName {
   KODIAK_V3 = "Kodiak V3",
   LAMINAR_V3 = "Laminar V3",
   LYNEX_V3 = "Lynex V3",
+  MACHINE_X_V3 = "MachineX V3",
   MENTO_V2 = "Mento V2",
+  MOAI_V3 = "Moai V3",
   NILE_SOLIDLY = "Nile Solidly",
   NILE_V3 = "Nile V3",
   OKU_V2 = "Oku V2",
@@ -62,6 +65,7 @@ export enum DexName {
   PHARAOH_SOLIDLY = "Pharaoh Solidly",
   PHARAOH_V3 = "Pharaoh V3",
   PLATYPUS = "Platypus",
+  PROJECT_X_V3 = "Project X V3",
   QUICKSWAP_V2 = "Quickswap V2",
   QUICKSWAP_V3 = "Quickswap V3",
   RAMSES_SOLIDLY = "Ramses Solidly",
@@ -75,6 +79,7 @@ export enum DexName {
   STELLASWAP_V3 = "Stellaswap V3",
   STELLASWAP_V4 = "Stellaswap V4",
   STELLASWAP_SADDLE = "Stellaswap Saddle",
+  SURGE_V3 = "Surge V3",
   SUSHISWAP_V2 = "Sushiswap V2",
   SUSHISWAP_V3 = "Sushiswap V3",
   SWAPBASED_V2 = "Swapbased V2",
@@ -102,7 +107,7 @@ export enum DexName {
   VELODROME_V3 = "Velodrome V3",
   VELOCIMETER = "Velocimeter",
   ZYBERSWAP_V2 = "Zyberswap V2",
-  ZYBERSWAP_V3 = "Zyberswap V3",
+  ZYBERSWAP_V3 = "Zyberswap V3",  
 }
 
 // identifiers dex adapters
