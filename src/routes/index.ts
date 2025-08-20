@@ -77,6 +77,7 @@ export interface Route {
   isBoostSupported: boolean;
   gasCosts: GasCost[];
   feeCosts: FeeCost[];
+  aggregateSlippage: number;
 }
 
 export interface RouteActionResponse extends Omit<RouteAction, "fromChain" | "toChain" | "data"> {
