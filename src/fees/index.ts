@@ -27,6 +27,7 @@ export type FeeCost = {
   amountUsd: string;
   logoURI?: string;
   data?: Record<string, any>;
+  receiver?: string;
 };
 
 export type GasCost = {
