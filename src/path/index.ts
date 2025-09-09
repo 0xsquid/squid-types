@@ -98,5 +98,5 @@ export interface PathParams {
   toToken: string;
   amountInUsd: number;
   tokenAmount: number;
-  features?: (PathFeature | string)[];
+  features?: PathFeature[];
 }
