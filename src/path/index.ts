@@ -85,6 +85,12 @@ export interface PathAction {
   data: ActionBaseData;
 }
 
+export enum PathFeature {
+  includeCoralPaths = "1",
+  onlyCoralPaths = "2",
+  // Add more features as needed
+}
+
 export interface PathParams {
   fromChainId: string;
   toChainId: string;
@@ -92,5 +98,5 @@ export interface PathParams {
   toToken: string;
   amountInUsd: number;
   tokenAmount: number;
-  includeCoralPaths?: boolean;
+  features?: PathFeature[];
 }

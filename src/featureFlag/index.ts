@@ -4,6 +4,7 @@ export enum FeatureFlagType {
   Solana = "solana",
   Chainflip = "chainflip",
   Coral = "coral",
+  CoralOnly = "coralOnly",
   CoralV2 = "coralV2",
   ChainflipMultihop = "chainflipMultihop",
   SagaRoutes = "sagaRoutes",
