@@ -73,6 +73,7 @@ export enum DexName {
   RAMSES_SOLIDLY = "Ramses Solidly",
   RA_V3 = "Ra V3",
   RAMSES_V3 = "Ramses V3",
+  SAUCERSWAP_V2 = "Saucerswap V2",
   SHADOW_V2 = "Shadow V2",
   SHADOW_V3 = "Shadow V3",
   SONEX_V3 = "Sonex V3",
@@ -109,7 +110,7 @@ export enum DexName {
   VELODROME_V3 = "Velodrome V3",
   VELOCIMETER = "Velocimeter",
   ZYBERSWAP_V2 = "Zyberswap V2",
-  ZYBERSWAP_V3 = "Zyberswap V3",  
+  ZYBERSWAP_V3 = "Zyberswap V3",
 }
 
 // identifiers dex adapters
