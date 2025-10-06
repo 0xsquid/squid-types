@@ -133,6 +133,7 @@ export enum ChainName {
   FANTOM = "Fantom",
   FILECOIN = "filecoin",
   FILECOIN2 = "filecoin-2", //testnet
+  HEDERA = "hedera",
   IMMUTABLE_ZKEVM = "immutable",
   KAVA = "kava",
   MANTLE = "mantle",
@@ -261,6 +262,7 @@ export enum NetworkIdentifier {
   CELO = "celo",
   FANTOM = "fantom",
   FILECOIN = "filecoin",
+  HEDERA = "hedera",
   IMMUTABLE_ZKEVM = "immutable",
   KAVA = "kava",
   MANTLE = "mantle",
