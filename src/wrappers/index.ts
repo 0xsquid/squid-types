@@ -18,7 +18,7 @@ export enum WrapperName {
   WRAPPED_USDY = "Ondo Finance",
   SKY_PROTOCOL_USDS = "DAI USDS Converter",
   SKY_PROTOCOL_SKY = "MKR SKY Converter",
-  SAUCERSWAP_WRAPPED_HBAR = "SaucerSwap Wrapped HBAR",
+  SAUCERSWAP_HBAR_WRAPPER = "SaucerSwap HBAR Wrapper",
 }
 
 export enum WrapDirection {
