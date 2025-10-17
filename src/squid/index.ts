@@ -4,6 +4,9 @@ import Long from "long";
 export enum SquidDataType {
   OnChainExecution = "ON_CHAIN_EXECUTION",
   ChainflipDepositAddress = "CHAINFLIP_DEPOSIT_ADDRESS",
+  DepositAddressCalldata = "DEPOSIT_ADDRESS_CALLDATA",
+  DepositAddressWithMemo = "DEPOSIT_ADDRESS_WITH_MEMO",
+  DepositAddressWithSignature = "DEPOSIT_ADDRESS_WITH_SIGNATURE",
 }
 
 export enum SquidRouteType {
