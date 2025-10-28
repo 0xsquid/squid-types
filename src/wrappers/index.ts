@@ -7,7 +7,7 @@ export enum WrapperType {
   WRAPPED_USDY = "WrappedUSDY",
   CONVERTER_DAI_USDS = "ConverterDAIUSDS",
   CONVERTER_MKR_SKY = "ConverterMKRSKY",
-  SAUCERSWAP_WRAPPED_HBAR = "SaucerSwap Wrapped HBAR",
+  SAUCERSWAP_WRAPPED_HBAR = "SaucerSwapWrappedHBAR",
 }
 
 export enum WrapperName {
