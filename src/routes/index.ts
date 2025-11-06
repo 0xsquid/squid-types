@@ -226,7 +226,6 @@ export interface IntegratorFee {
   squidFlat: number;
   squidPercentage: number;
   enabled: boolean;
-  waivePlatformFee: boolean;
   address: string;
   address2?: string;
   integrator?: Integrator;
@@ -237,7 +236,6 @@ export interface ChainFee {
   flat: number;
   percentage: number;
   enabled: boolean;
-  waivePlatformFee: boolean;
   chain?: ChainData;
 }
 
@@ -246,7 +244,6 @@ export interface TokenFee {
   flat: number;
   percentage: number;
   enabled: boolean;
-  waivePlatformFee: boolean;
   token?: Token;
 }
 
@@ -256,7 +253,6 @@ export interface TierFee {
   flat: number;
   percentage: number;
   enabled: boolean;
-  waivePlatformFee: boolean;
 }
 
 export interface FeeDetails {
