@@ -12,6 +12,7 @@ export enum FeatureFlagType {
   Ripple = "ripple",
   Megabridge = "megabridge",
   Stellar = "stellar",
+  Mantra = "mantra",
 }
 
 export interface FeatureFlag {
