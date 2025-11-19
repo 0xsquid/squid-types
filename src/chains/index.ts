@@ -138,6 +138,7 @@ export enum ChainName {
   KAVA = "kava",
   MANTLE = "mantle",
   MANTRA = "mantra",
+  MONAD = "monad",
   MOONBEAM = "Moonbeam",
   OPTIMISM = "optimism",
   POLYGON_ZKEVM = "polygon-zkevm",
@@ -152,7 +153,6 @@ export enum ChainName {
   SONEIUM = "soneium",
   PEAQ = "peaq",
   HYPER_EVM = "hyper-evm",
-  MONAD = "monad",
 
   // Cosmos
   AGORIC = "agoric",
@@ -269,6 +269,7 @@ export enum NetworkIdentifier {
   KAVA = "kava",
   MANTLE = "mantle",
   MANTRA = "mantra",
+  MONAD = "monad",
   MOONBEAM = "moonbeam",
   OPTIMISM = "optimism",
   POLYGON = "polygon",
