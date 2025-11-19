@@ -152,6 +152,7 @@ export enum ChainName {
   SONEIUM = "soneium",
   PEAQ = "peaq",
   HYPER_EVM = "hyper-evm",
+  MONAD = "monad",
 
   // Cosmos
   AGORIC = "agoric",
