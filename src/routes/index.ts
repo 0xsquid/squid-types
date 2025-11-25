@@ -34,6 +34,7 @@ export interface RouteRequest {
   customParams?: {
     jitoTipFeeInLamports?: string;
   };
+  overrideGasRefundAddress?: string;
 }
 
 export interface RouteRequestPopulated {
@@ -55,6 +56,7 @@ export interface RouteRequestPopulated {
   customParams?: {
     jitoTipFeeInLamports?: string;
   };
+  overrideGasRefundAddress?: string;
 }
 
 export interface Estimate extends Omit<Route, "actions"> {
