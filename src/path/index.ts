@@ -88,6 +88,8 @@ export interface PathAction {
 export enum PathFeature {
   includeCoralPaths = "1",
   onlyCoralPaths = "2",
+  includeCoralV2Paths = "3",
+  onlyCoralV2Paths = "4",
   // Add more features as needed
 }
 
