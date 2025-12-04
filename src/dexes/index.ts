@@ -50,6 +50,7 @@ export enum DexName {
   KODIAK_V3 = "Kodiak V3",
   LAMINAR_V3 = "Laminar V3",
   LYNEX_V3 = "Lynex V3",
+  LOTUS_V3 = "Lotus V3",
   MACHINE_X_V3 = "MachineX V3",
   MENTO_V2 = "Mento V2",
   MOAI_V3 = "Moai V3",
