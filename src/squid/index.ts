@@ -38,6 +38,7 @@ export interface OnChainExecutionData {
   expiry?: string;
   expiryOffset?: string;
   hasJitoTipFee?: boolean;
+  signatureRequired?: string;
 }
 
 export interface ChainflipDepositAddressData {
