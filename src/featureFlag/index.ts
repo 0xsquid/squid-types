@@ -13,6 +13,7 @@ export enum FeatureFlagType {
   Megabridge = "megabridge",
   Stellar = "stellar",
   Mantra = "mantra",
+  HederaPilot = "hederaPilot",
 }
 
 export interface FeatureFlag {
