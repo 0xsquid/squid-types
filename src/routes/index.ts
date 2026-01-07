@@ -211,12 +211,18 @@ export enum FEES_ENUM {
   TIER = "TIER",
 }
 
+export interface AddressEntry {
+  chainType: ChainType;
+  address: string;
+}
+
 export interface PlatformFee {
   type: FEES_ENUM.PLATFORM;
   flat: number;
   percentage: number;
   enabled: boolean;
   address: string;
+  addressBook?: AddressEntry[];
 }
 
 export interface IntegratorFee {
@@ -229,7 +235,9 @@ export interface IntegratorFee {
   squidPercentage: number;
   enabled: boolean;
   address: string;
+  addressBook?: AddressEntry[];
   address2?: string;
+  addressBook2?: AddressEntry[];
   integrator?: Integrator;
 }
 
