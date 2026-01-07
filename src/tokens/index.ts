@@ -19,6 +19,7 @@ export interface Token {
   isLpToken?: boolean;
   disabled?: boolean;
   originalAddress?: string;
+  tokenProgramId?: string;
 }
 
 export interface CosmosToken extends Token {
