@@ -168,6 +168,7 @@ export interface BridgeDetails {
   name: string;
   logoURI?: string;
   calls?: ChainCall[];
+  quote?: { estimatedPrice: string };
 }
 
 export interface CustomCallDetails {
