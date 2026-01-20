@@ -90,6 +90,7 @@ export enum PathFeature {
   onlyCoralPaths = "2",
   includeCoralV2Paths = "3",
   onlyCoralV2Paths = "4",
+  includeCoralV2PreHooks = "5",
   // Add more features as needed
 }
 
