@@ -247,6 +247,9 @@ export enum ChainName {
   // STELLAR
   STELLAR = "stellar",
 
+  // CITREA
+  CITREA = "citrea",
+
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
   SUI_TESTNET = "sui-testnet",
@@ -375,6 +378,9 @@ export enum NetworkIdentifier {
 
   // STELLAR
   STELLAR = "stellar",
+
+  // CITREA
+  CITREA = "citrea",
 
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
