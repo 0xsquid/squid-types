@@ -50,6 +50,7 @@ export type StatusResponse = ApiBasicResponse & {
   gasStatus: string;
   isGMPTransaction?: boolean;
   axelarTransactionUrl: string;
+  coralTransactionUrl?: string;
   fromChain?: TransactionStatus;
   toChain?: TransactionStatus;
   timeSpent?: Record<string, number> | {};
