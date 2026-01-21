@@ -128,6 +128,7 @@ export enum ChainName {
   BINANCE = "binance",
   CELO = "celo",
   CENTRIFUGE = "centrifuge",
+  CITREA = "citrea",
   ETHEREUM = "Ethereum",
   ETHEREUM2 = "Ethereum-2", //testnet
   FANTOM = "Fantom",
@@ -262,6 +263,7 @@ export enum NetworkIdentifier {
   BASE = "base",
   BINANCE = "binance",
   CELO = "celo",
+  CITREA = "citrea",
   FANTOM = "fantom",
   FILECOIN = "filecoin",
   HEDERA = "hedera",
