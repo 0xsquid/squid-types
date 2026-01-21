@@ -128,6 +128,7 @@ export enum ChainName {
   BINANCE = "binance",
   CELO = "celo",
   CENTRIFUGE = "centrifuge",
+  CITREA = "citrea",
   ETHEREUM = "Ethereum",
   ETHEREUM2 = "Ethereum-2", //testnet
   FANTOM = "Fantom",
@@ -247,9 +248,6 @@ export enum ChainName {
   // STELLAR
   STELLAR = "stellar",
 
-  // CITREA
-  CITREA = "citrea",
-
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
   SUI_TESTNET = "sui-testnet",
@@ -265,6 +263,7 @@ export enum NetworkIdentifier {
   BASE = "base",
   BINANCE = "binance",
   CELO = "celo",
+  CITREA = "citrea",
   FANTOM = "fantom",
   FILECOIN = "filecoin",
   HEDERA = "hedera",
@@ -378,9 +377,6 @@ export enum NetworkIdentifier {
 
   // STELLAR
   STELLAR = "stellar",
-
-  // CITREA
-  CITREA = "citrea",
 
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
