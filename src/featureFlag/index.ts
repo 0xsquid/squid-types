@@ -20,6 +20,7 @@ export enum FeatureFlagType {
   Mantra = "mantra",
   HederaPilot = "hederaPilot",
   Citrea = "citrea",
+  HederaCoralV2 = "hederaCoralV2",
 }
 
 export interface FeatureFlag {
