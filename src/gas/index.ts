@@ -9,6 +9,8 @@ export interface FeeData {
   itsTransferFee?: string;
   // xrpl specific
   baseReserve?: string;
+  // btc specific
+  feeRate?: string;
 }
 
 export interface AxelarFeeData {
