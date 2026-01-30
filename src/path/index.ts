@@ -52,6 +52,7 @@ export interface ActionBaseData {
   isStable: boolean;
   exchangeId?: string;
   exchangeProvider?: string;
+  reserve?: string;
   osmosisPools: {
     poolId: string;
     tokenOutDenom: string;
