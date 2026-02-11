@@ -8,6 +8,7 @@ export enum ChainType {
   SUI = "sui",
   XRPL = "xrpl",
   STELLAR = "stellar",
+  HYPERLIQUID = "hyperliquid",
 }
 
 export type JitoTipFee = {
@@ -248,6 +249,9 @@ export enum ChainName {
   // STELLAR
   STELLAR = "stellar",
 
+  // HYPERLIQUID
+  HYPERLIQUID = "hyperliquid",
+
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
   SUI_TESTNET = "sui-testnet",
@@ -377,6 +381,9 @@ export enum NetworkIdentifier {
 
   // STELLAR
   STELLAR = "stellar",
+
+  // HYPERLIQUID
+  HYPERLIQUID = "hyperliquid",
 
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",

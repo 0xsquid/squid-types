@@ -22,6 +22,8 @@ export enum FeatureFlagType {
   Citrea = "citrea",
   HederaCoralV2 = "hederaCoralV2",
   AddressQuoteRateLimit = "addressQuoteRateLimit",
+  Hyperliquid = "hyperliquid",
+  HyperliquidCoralV2 = "hyperliquidCoralV2",
 }
 
 export interface FeatureFlag {
