@@ -319,6 +319,8 @@ export enum ActionStage {
   XRPL_DESTINATION,
   STELLAR_SOURCE,
   STELLAR_DESTINATION,
+  HYPERLIQUID_SOURCE,
+  HYPERLIQUID_DESTINATION,
 }
 
 export interface StageContext {
