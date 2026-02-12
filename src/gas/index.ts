@@ -3,6 +3,11 @@ export interface FeeData {
   maxFeePerGas?: string;
   maxPriorityFeePerGas?: string;
   gasPrice: string;
+  // Infura fees
+  infuraGasPrice?: string;
+  infuraMaxFeePerGas?: string;
+  infuraMaxPriorityFeePerGas?: string;
+  infuraEstimatedBaseFee?: string;
   // sui specific
   createOrderFee?: string;
   fillOrderFee?: string;
