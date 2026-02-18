@@ -19,10 +19,11 @@ export interface RouteResponse {
 export interface RouteRequest {
   fromChain: string;
   fromToken: string;
-  fromAmount: string;
+  fromAmount?: string;
   fromAddress?: string;
   toChain: string;
   toToken: string;
+  toAmount?: string;
   toAddress?: string;
   slippage?: number;
   quoteOnly?: boolean;
@@ -334,4 +335,5 @@ export interface StageContext {
   multicall?: string;
   preHook: boolean;
   postHook: boolean;
+  isExactOutput?: boolean;
 }

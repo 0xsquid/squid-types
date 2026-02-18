@@ -93,6 +93,7 @@ export enum PathFeature {
   onlyCoralV2Paths = "4",
   includeCoralV2PreHooks = "5",
   includeCoralV2PostHooks = "6",
+  isExactOutput = "7",
   // Add more features as needed
 }
 
