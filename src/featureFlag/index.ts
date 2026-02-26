@@ -22,6 +22,7 @@ export enum FeatureFlagType {
   HederaPilot = "hederaPilot",
   Citrea = "citrea",
   HederaCoralV2 = "hederaCoralV2",
+  HederaBlocked = "hederaBlocked",
   AddressQuoteRateLimit = "addressQuoteRateLimit",
   ExactOutputRouting = "exactOutputRouting",
 }
