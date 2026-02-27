@@ -8,6 +8,7 @@ export enum SquidDataType {
   DepositAddressCalldata = "DEPOSIT_ADDRESS_CALLDATA",
   DepositAddressWithMemo = "DEPOSIT_ADDRESS_WITH_MEMO",
   DepositAddressWithSignature = "DEPOSIT_ADDRESS_WITH_SIGNATURE",
+  DepositAddressWithFeeToken = "DEPOSIT_ADDRESS_WITH_FEE_TOKEN",
 }
 
 export enum SquidRouteType {
