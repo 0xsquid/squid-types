@@ -25,6 +25,8 @@ export enum FeatureFlagType {
   HederaBlocked = "hederaBlocked",
   AddressQuoteRateLimit = "addressQuoteRateLimit",
   ExactOutputRouting = "exactOutputRouting",
+  Tempo = "tempo",
+  TempoCoralV2 = "tempoCoralV2",
 }
 
 export interface FeatureFlag {
