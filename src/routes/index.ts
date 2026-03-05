@@ -19,7 +19,7 @@ export interface RouteResponse {
 export interface RouteRequest {
   fromChain: string;
   fromToken: string;
-  fromAmount: string;
+  fromAmount?: string;
   fromAddress?: string;
   toChain: string;
   toToken: string;
