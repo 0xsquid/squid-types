@@ -27,6 +27,7 @@ export enum FeatureFlagType {
   ExactOutputRouting = "exactOutputRouting",
   Tempo = "tempo",
   TempoCoralV2 = "tempoCoralV2",
+  AddressValidation = "addressValidation",
 }
 
 export interface FeatureFlag {
