@@ -19,7 +19,6 @@ export enum BridgeProvider {
   CHAINFLIP = "Chainflip",
   RFQ = "Squid Intents",
   IMMUTABLE = "Immutable",
-  CORAL_V2 = "Squid Intents",
 }
 
 export type BridgeConfig = Record<string, string>;
