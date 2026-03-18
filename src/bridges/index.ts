@@ -17,9 +17,8 @@ export enum BridgeProvider {
   IBC = "IBC",
   PFM = "IBC Packet forward middleware",
   CHAINFLIP = "Chainflip",
-  RFQ = "CORAL",
+  RFQ = "Squid Intents",
   IMMUTABLE = "Immutable",
-  CORAL_V2 = "CORAL V2",
 }
 
 export type BridgeConfig = Record<string, string>;
