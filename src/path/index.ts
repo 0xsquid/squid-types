@@ -105,4 +105,6 @@ export interface PathParams {
   amountInUsd: number;
   tokenAmount: number;
   features?: PathFeature[];
+  includeDexes?: string[];
+  excludeDexes?: string[];
 }
