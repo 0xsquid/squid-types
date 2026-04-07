@@ -118,6 +118,7 @@ export enum ActionType {
   CUSTOM = "custom",
   FEE = "fee",
   RFQ = "rfq",
+  SQUID_SEND = "squid-send",
 }
 
 export interface WrapDetails {
