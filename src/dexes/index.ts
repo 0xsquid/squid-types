@@ -114,6 +114,7 @@ export enum DexName {
   VELOCIMETER = "Velocimeter",
   ZYBERSWAP_V2 = "Zyberswap V2",
   ZYBERSWAP_V3 = "Zyberswap V3",
+  TEMPO_STABLECOIN = "Tempo Stablecoin",
 }
 
 // identifiers dex adapters
@@ -141,6 +142,9 @@ export enum DexType {
   // COSMOS
   OSMOSIS = "osmosis",
   ASTROPORT = "astroport",
+
+  // Tempo
+  TEMPO_STABLECOIN = "tempo-stablecoin",
 
   // ONCE WE START ADDING DEXES WE WILL BE MOVING THEM ABOVE
   /*
