@@ -29,6 +29,7 @@ export enum FeatureFlagType {
   TempoCoralV2 = "tempoCoralV2",
   AddressValidation = "addressValidation",
   SquidSend = "squidSend",
+  FilecoinCoralV2 = "filecoinCoralV2",
 }
 
 export interface FeatureFlag {
