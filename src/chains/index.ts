@@ -8,6 +8,7 @@ export enum ChainType {
   SUI = "sui",
   XRPL = "xrpl",
   STELLAR = "stellar",
+  CANTON = "canton",
 }
 
 export type JitoTipFee = {
@@ -379,6 +380,9 @@ export enum NetworkIdentifier {
 
   // STELLAR
   STELLAR = "stellar",
+
+  // CANTON
+  CANTON = "canton",
 
   // TESTNETS
   ETHEREUM_SEPOLIA = "ethereum-sepolia",
