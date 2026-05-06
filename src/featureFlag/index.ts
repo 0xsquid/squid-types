@@ -31,6 +31,7 @@ export enum FeatureFlagType {
   SquidSend = "squidSend",
   FilecoinCoralV2 = "filecoinCoralV2",
   CantonCoralV2 = "cantonCoralV2",
+  CoralV2EchoStatus = "coralV2EchoStatus",
 }
 
 export interface FeatureFlag {
