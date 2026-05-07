@@ -54,6 +54,7 @@ export enum DexName {
   LOTUS_V3 = "Lotus V3",
   MACHINE_X_V3 = "MachineX V3",
   MENTO_V2 = "Mento V2",
+  MENTO_V3 = "Mento V3",
   MOAI_V3 = "Moai V3",
   NILE_SOLIDLY = "Nile Solidly",
   NILE_V3 = "Nile V3",
@@ -139,6 +140,7 @@ export enum DexType {
   UNISWAP_V2 = "uniswap-v2",
   UNISWAP_V3 = "uniswap-v3",
   MENTO_V2 = "mento-v2",
+  MENTO_V3 = "mento-v3",
   // COSMOS
   OSMOSIS = "osmosis",
   ASTROPORT = "astroport",
