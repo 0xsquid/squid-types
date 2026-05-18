@@ -8,6 +8,7 @@ export enum BridgeType {
   RFQ = "rfq",
   ITB = "immutable-token-bridge",
   CORAL_V2 = "coral-v2",
+  LAYERZERO_OFT = "layerzero-oft",
 }
 
 export enum BridgeProvider {
@@ -19,6 +20,7 @@ export enum BridgeProvider {
   CHAINFLIP = "Chainflip",
   RFQ = "Squid Intents",
   IMMUTABLE = "Immutable",
+  LAYERZERO = "LayerZero",
 }
 
 export type BridgeConfig = Record<string, string>;
