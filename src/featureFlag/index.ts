@@ -5,6 +5,7 @@ export enum FeatureFlagType {
   Solana = "solana",
   SolanaCoralV2 = "solanaCoralV2",
   Chainflip = "chainflip",
+  CoralOnly = "coralOnly",
   CoralV2 = "coralV2",
   CoralV2PostHooks = "coralV2PostHooks",
   CoralV2PreHooks = "coralV2PreHooks",
