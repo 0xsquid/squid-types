@@ -16,6 +16,7 @@ export enum FeatureFlagType {
   BypassCompliance = "bypassCompliance",
   Ripple = "ripple",
   RippleCoralV2 = "rippleCoralV2",
+  Megabridge = "megabridge",
   Stellar = "stellar",
   StellarCoralV2 = "stellarCoralV2",
   Mantra = "mantra",
