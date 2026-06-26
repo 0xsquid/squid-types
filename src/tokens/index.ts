@@ -22,21 +22,6 @@ export interface Token {
   tokenProgramId?: string;
 }
 
-export interface CosmosToken extends Token {
-  denom: string;
-  base_denom: string;
-  base_type: string;
-  dp_denom: string;
-  origin_chain: string;
-  decimal: number;
-  description: string;
-  image: string;
-}
-
-export interface EvmToken extends Token {
-  address: string;
-}
-
 export enum Volatility {
   SUPER_STABLE,
   STABLE,

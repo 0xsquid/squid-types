@@ -418,12 +418,6 @@ export type Channel = {
   };
 };
 
-export type IbcData = {
-  chain_1: ChainIBCInfo;
-  chain_2: ChainIBCInfo;
-  channels: Channel[];
-};
-
 export enum CosmosChainFeatures {
   PACKET_FORWARD_MIDDLEWARE = "packet-forward-middleware",
   LEGACY_IBC = "legacy-ibc",

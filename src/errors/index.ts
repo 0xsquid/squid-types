@@ -5,10 +5,6 @@ export type SquidError = {
   path?: string;
 };
 
-export type SquidErrorResponse = {
-  errors: SquidError[];
-};
-
 export enum ErrorType {
   SCHEMA_VALIDATION_ERROR = "SCHEMA_VALIDATION_ERROR",
   PATH_FINDER_ERROR = "PATH_FINDER_ERROR",
