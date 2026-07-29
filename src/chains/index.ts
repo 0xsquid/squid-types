@@ -392,6 +392,7 @@ export enum NetworkIdentifier {
   XRPL_EVM_TESTNET = "xrpl-evm-testnet",
 
   STELLAR_TESTNET = "stellar-testnet",
+  GIWA_SEPOLIA = "giwa-sepolia",
 }
 
 export type ChainIBCInfo = {
