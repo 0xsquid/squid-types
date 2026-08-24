@@ -34,6 +34,7 @@ export enum FeatureFlagType {
   CantonCoralV2 = "cantonCoralV2",
   CoralV2EchoStatus = "coralV2EchoStatus",
   FeatureManagerV2 = "featureManagerV2",
+  DanalCoralV2 = "danalCoralV2",
 }
 
 export interface FeatureFlag {
