@@ -24,6 +24,7 @@ export enum DexName {
   CAMELOT_V2 = "Camelot V2",
   CAMELOT_V3 = "Camelot V3",
   CURVE_V2 = "Curve V2",
+  DRAGONSWAP_V3 = "DragonSwap V3",
   ELLIPSIS = "Ellipsis",
   EQUILIBRE = "Equilibre",
   EQUALIZER = "Equalizer",

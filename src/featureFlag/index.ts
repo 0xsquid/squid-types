@@ -28,6 +28,8 @@ export enum FeatureFlagType {
   ExactOutputRouting = "exactOutputRouting",
   Tempo = "tempo",
   TempoCoralV2 = "tempoCoralV2",
+  Kaia = "kaia",
+  KaiaCoralV2 = "kaiaCoralV2",
   AddressValidation = "addressValidation",
   SquidSend = "squidSend",
   FilecoinCoralV2 = "filecoinCoralV2",

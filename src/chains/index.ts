@@ -157,6 +157,7 @@ export enum ChainName {
   PEAQ = "peaq",
   HYPER_EVM = "hyper-evm",
   TEMPO = "tempo",
+  KAIA = "kaia",
 
   // Cosmos
   AGORIC = "agoric",
@@ -289,6 +290,7 @@ export enum NetworkIdentifier {
   PEAQ = "peaq",
   HYPER_EVM = "hyper-evm",
   TEMPO = "tempo",
+  KAIA = "kaia",
 
   // COSMOS
   AGORIC = "agoric",
