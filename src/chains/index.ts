@@ -9,6 +9,7 @@ export enum ChainType {
   XRPL = "xrpl",
   STELLAR = "stellar",
   CANTON = "canton",
+  DANAL = "danal",
 }
 
 export type JitoTipFee = {
@@ -395,6 +396,9 @@ export enum NetworkIdentifier {
 
   STELLAR_TESTNET = "stellar-testnet",
   GIWA_SEPOLIA = "giwa-sepolia",
+
+  DANAL = "danal",
+  DANAL_TESTNET = "danal-testnet",
 }
 
 export type ChainIBCInfo = {
