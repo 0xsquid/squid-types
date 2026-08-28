@@ -158,6 +158,7 @@ export enum ChainName {
   HYPER_EVM = "hyper-evm",
   TEMPO = "tempo",
   KAIA = "kaia",
+  ROBINHOOD = "robinhood",
 
   // Cosmos
   AGORIC = "agoric",
@@ -291,6 +292,7 @@ export enum NetworkIdentifier {
   HYPER_EVM = "hyper-evm",
   TEMPO = "tempo",
   KAIA = "kaia",
+  ROBINHOOD = "robinhood",
 
   // COSMOS
   AGORIC = "agoric",
