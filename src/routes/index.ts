@@ -323,6 +323,8 @@ export enum ActionStage {
   STELLAR_DESTINATION,
   CANTON_SOURCE,
   CANTON_DESTINATION,
+  DANAL_SOURCE,
+  DANAL_DESTINATION,
 }
 
 export interface StageContext {
