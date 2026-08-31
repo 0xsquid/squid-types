@@ -109,6 +109,7 @@ export enum DexName {
   UBESWAP_V3 = "Ubeswap V3",
   UNISWAP_V2 = "Uniswap V2",
   UNISWAP_V3 = "Uniswap V3",
+  UNISWAP_V4 = "Uniswap V4",
   WAGMI_V3 = "Wagmi V3",
   WIGOSWAP_V2 = "Wigoswap V2",
   WOMBAT = "Wombat",
@@ -144,6 +145,7 @@ export enum DexType {
   WOMBAT = "wombat",
   UNISWAP_V2 = "uniswap-v2",
   UNISWAP_V3 = "uniswap-v3",
+  UNISWAP_V4 = "uniswap-v4",
   MENTO_V2 = "mento-v2",
   MENTO_V3 = "mento-v3",
   // COSMOS
