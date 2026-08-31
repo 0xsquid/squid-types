@@ -159,6 +159,10 @@ export enum ChainName {
   TEMPO = "tempo",
   KAIA = "kaia",
   ROBINHOOD = "robinhood",
+  KUB = "kub",
+  XLAYER = "xlayer",
+  UNICHAIN = "unichain",
+  INK = "ink",
 
   // Cosmos
   AGORIC = "agoric",
@@ -293,6 +297,10 @@ export enum NetworkIdentifier {
   TEMPO = "tempo",
   KAIA = "kaia",
   ROBINHOOD = "robinhood",
+  KUB = "kub",
+  XLAYER = "xlayer",
+  UNICHAIN = "unichain",
+  INK = "ink",
 
   // COSMOS
   AGORIC = "agoric",
