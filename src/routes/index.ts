@@ -341,4 +341,5 @@ export interface StageContext {
   preHook: boolean;
   postHook: boolean;
   isExactOutput?: boolean;
+  quoteOnly?: boolean;
 }
