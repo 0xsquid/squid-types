@@ -24,7 +24,7 @@ export type JitoTipFee = {
 export type BaseChain = {
   chainId: string;
   chainType: ChainType;
-  axelarChainName: ChainName;
+  axelarChainName?: ChainName;
   networkIdentifier: NetworkIdentifier;
   networkName: string;
   rpc: string;
