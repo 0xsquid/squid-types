@@ -32,6 +32,8 @@ export enum FeatureFlagType {
   KaiaCoralV2 = "kaiaCoralV2",
   Robinhood = "robinhood",
   RobinhoodCoralV2 = "robinhoodCoralV2",
+  Arc = "arc",
+  ArcCoralV2 = "arcCoralV2",
   AddressValidation = "addressValidation",
   SquidSend = "squidSend",
   FilecoinCoralV2 = "filecoinCoralV2",
