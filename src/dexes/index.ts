@@ -50,6 +50,7 @@ export enum DexName {
   KITTENSWAP_V2 = "Kittenswap V2",
   KITTENSWAP_V3 = "Kittenswap V3",
   KODIAK_V3 = "Kodiak V3",
+  KUBLERX = "KublerX",
   LAMINAR_V3 = "Laminar V3",
   LYNEX_V3 = "Lynex V3",
   LOTUS_V3 = "Lotus V3",
