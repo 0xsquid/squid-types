@@ -163,6 +163,7 @@ export enum ChainName {
   XLAYER = "xlayer",
   UNICHAIN = "unichain",
   INK = "ink",
+  ARC = "arc",
 
   // Cosmos
   AGORIC = "agoric",
@@ -301,6 +302,7 @@ export enum NetworkIdentifier {
   XLAYER = "xlayer",
   UNICHAIN = "unichain",
   INK = "ink",
+  ARC = "arc",
 
   // COSMOS
   AGORIC = "agoric",
