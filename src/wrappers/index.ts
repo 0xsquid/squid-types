@@ -8,6 +8,7 @@ export enum WrapperType {
   CONVERTER_DAI_USDS = "ConverterDAIUSDS",
   CONVERTER_MKR_SKY = "ConverterMKRSKY",
   SAUCERSWAP_WRAPPED_HBAR = "SaucerSwapWrappedHBAR",
+  KKUB_UNWRAPPER = "KKUBUnwrapper",
 }
 
 export enum WrapperName {
@@ -20,6 +21,7 @@ export enum WrapperName {
   SKY_PROTOCOL_USDS = "DAI USDS Converter",
   SKY_PROTOCOL_SKY = "MKR SKY Converter",
   SAUCERSWAP_HBAR_WRAPPER = "SaucerSwap HBAR Wrapper",
+  KKUB_UNWRAPPER = "KKUB Unwrapper",
 }
 
 export enum WrapDirection {
