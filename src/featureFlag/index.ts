@@ -45,6 +45,8 @@ export enum FeatureFlagType {
   KavaCoralV2 = "kavaCoralV2",
   ImmutableZkEvmCoralV2 = "immutableZkEvmCoralV2",
   MantleCoralV2 = "mantleCoralV2",
+  Arc = "arc",
+  ArcCoralV2 = "arcCoralV2",
   AddressValidation = "addressValidation",
   SquidSend = "squidSend",
   FilecoinCoralV2 = "filecoinCoralV2",
