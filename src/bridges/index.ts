@@ -8,6 +8,7 @@ export enum BridgeType {
   RFQ = "rfq",
   ITB = "immutable-token-bridge",
   CORAL_V2 = "coral-v2",
+  SOCKET = "socket",
 }
 
 export enum BridgeProvider {
@@ -19,6 +20,7 @@ export enum BridgeProvider {
   CHAINFLIP = "Chainflip",
   RFQ = "Squid Intents",
   IMMUTABLE = "Immutable",
+  SOCKET = "Socket",
 }
 
 export type BridgeConfig = Record<string, string>;

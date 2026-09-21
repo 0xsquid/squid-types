@@ -94,6 +94,8 @@ export enum PathFeature {
   includeCoralV2PreHooks = "5",
   includeCoralV2PostHooks = "6",
   isExactOutput = "7",
+  // "8" reserved for Relay's includeRelayPaths (separate PR)
+  includeSocketPaths = "9",
   // Add more features as needed
 }
 
