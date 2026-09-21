@@ -9,6 +9,7 @@ export enum FeeType {
   EXECUTION_FEE = "Execution fee",
   SETTLEMENT_FEE = "Settlement fee",
   SERVICE_FEE = "Service fee",
+  LIFI_FEE = "LI.FI fee",
 }
 
 export enum GasCostType {
