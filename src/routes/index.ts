@@ -71,12 +71,16 @@ export interface Route {
   fromAmount: string;
   toAmount: string;
   toAmountMin: string;
+  /** Exact output only: the input cap encoded in the transaction, fromAmount widened by the route slippage */
+  fromAmountMax?: string;
   exchangeRate: string;
   aggregatePriceImpact: string;
   estimatedRouteDuration: number;
   fromAmountUSD?: string;
   toAmountUSD?: string;
   toAmountMinUSD?: string;
+  /** Exact output only: USD value of fromAmountMax */
+  fromAmountMaxUSD?: string;
   isBoostSupported: boolean;
   gasCosts: GasCost[];
   feeCosts: FeeCost[];
