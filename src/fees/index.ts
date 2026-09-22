@@ -10,6 +10,7 @@ export enum FeeType {
   SETTLEMENT_FEE = "Settlement fee",
   SERVICE_FEE = "Service fee",
   RELAY_FEE = "Relay fee",
+  CCTP_FEE = "CCTP fee",
 }
 
 export enum GasCostType {
