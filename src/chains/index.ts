@@ -24,7 +24,7 @@ export type JitoTipFee = {
 export type BaseChain = {
   chainId: string;
   chainType: ChainType;
-  axelarChainName: ChainName;
+  axelarChainName?: ChainName;
   networkIdentifier: NetworkIdentifier;
   networkName: string;
   rpc: string;
@@ -159,6 +159,11 @@ export enum ChainName {
   TEMPO = "tempo",
   KAIA = "kaia",
   ROBINHOOD = "robinhood",
+  KUB = "kub",
+  XLAYER = "xlayer",
+  UNICHAIN = "unichain",
+  INK = "ink",
+  ARC = "arc",
 
   // Cosmos
   AGORIC = "agoric",
@@ -293,6 +298,11 @@ export enum NetworkIdentifier {
   TEMPO = "tempo",
   KAIA = "kaia",
   ROBINHOOD = "robinhood",
+  KUB = "kub",
+  XLAYER = "xlayer",
+  UNICHAIN = "unichain",
+  INK = "ink",
+  ARC = "arc",
 
   // COSMOS
   AGORIC = "agoric",
