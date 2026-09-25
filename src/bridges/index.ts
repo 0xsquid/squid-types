@@ -3,6 +3,7 @@ export enum BridgeType {
   AXELAR_ITS = "axelar-its",
   CCTP = "cctp",
   NOBLE_CCTP = "noble-cctp",
+  CCTP_V2 = "cctp-v2",
   IBC = "ibc",
   CHAINFLIP = "chainflip",
   RFQ = "rfq",
@@ -14,6 +15,7 @@ export enum BridgeType {
 export enum BridgeProvider {
   AXELAR = "Axelar",
   CCTP = "CCTP",
+  CCTP_V2 = "CCTP V2",
   NOBLE_CCTP = "Noble CCTP",
   IBC = "IBC",
   PFM = "IBC Packet forward middleware",
