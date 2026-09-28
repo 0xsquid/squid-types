@@ -60,6 +60,7 @@ export interface ActionBaseData {
   buckets: Buckets;
   tickSpacing: number;
   binStep: number;
+  factory?: string;
 
   // wrappers
   address: string;
