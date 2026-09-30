@@ -28,7 +28,7 @@ export interface RouteRequest {
   slippage?: number;
   quoteOnly?: boolean;
   preHook?: Hook;
-  postHook?: Omit<Hook, "fundAmount" | "fundToken">;
+  postHook?: Omit<Hook, "fundAmount" | "fundToken"> & PostHookIntent;
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   bypassGuardrails?: boolean;
@@ -50,7 +50,7 @@ export interface RouteRequestPopulated {
   quoteOnly?: boolean;
   enableBoost?: boolean;
   preHook?: Hook;
-  postHook?: Omit<Hook, "fundAmount" | "fundToken">;
+  postHook?: Omit<Hook, "fundAmount" | "fundToken"> & PostHookIntent;
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   bypassGuardrails?: boolean;
@@ -294,6 +294,18 @@ export interface Hook {
   description: string;
   logoURI: string;
   provider: string;
+}
+
+/**
+ * Destination-intent hints a CCTP V2 post-hook (ISS-1878) carries alongside its `calls`. They are
+ * committed into the on-chain `SquidCctpReceiver` intent so a fill delivers between `toAmountMin`
+ * and `toAmount` (the rest is retained as protocol surplus):
+ * - `toAmountMin` — the unconditional output floor in `toToken` units; the fill reverts below it.
+ * - `toAmount` — the payout cap in `toToken` units; `"0"` / omitted means uncapped (pass-through).
+ */
+export interface PostHookIntent {
+  toAmountMin?: string;
+  toAmount?: string;
 }
 
 export interface FallbackAddress {
