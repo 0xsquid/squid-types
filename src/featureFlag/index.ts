@@ -55,6 +55,8 @@ export enum FeatureFlagType {
   FeatureManagerV2 = "featureManagerV2",
   Danal = "danal",
   DanalCoralV2 = "danalCoralV2",
+  Relay = "relay",
+  CctpV2 = "cctpV2",
 }
 
 export interface FeatureFlag {
