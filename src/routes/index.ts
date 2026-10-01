@@ -153,6 +153,7 @@ export interface SwapDetails {
   poolFee: string;
   tickSpacing: number;
   binStep: number;
+  factory?: string;
   osmosisPools: {
     poolId: string;
     tokenOutDenom: string;
