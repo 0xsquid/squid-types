@@ -302,10 +302,9 @@ export interface Hook {
 }
 
 /**
- * Destination-intent hints a CCTP V2 post-hook (ISS-1878) carries alongside its `calls`. They are
- * committed into the on-chain `SquidCctpReceiver` intent so a fill delivers between `toAmountMin`
- * and `toAmount` (the rest is retained as protocol surplus):
- * - `toAmountMin` — the unconditional output floor in `toToken` units; the fill reverts below it.
+ * Destination-intent hints for a post-hook, reserved for CCTP V2 custom post-hooks. Not read by
+ * any route today.
+ * - `toAmountMin` — the output floor in `toToken` units.
  * - `toAmount` — the payout cap in `toToken` units; `"0"` / omitted means uncapped (pass-through).
  */
 export interface PostHookIntent {
