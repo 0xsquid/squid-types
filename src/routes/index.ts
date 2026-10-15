@@ -28,7 +28,7 @@ export interface RouteRequest {
   slippage?: number;
   quoteOnly?: boolean;
   preHook?: Hook;
-  postHook?: Omit<Hook, "fundAmount" | "fundToken">;
+  postHook?: Omit<Hook, "fundAmount" | "fundToken"> & PostHookIntent;
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   bypassGuardrails?: boolean;
@@ -50,7 +50,7 @@ export interface RouteRequestPopulated {
   quoteOnly?: boolean;
   enableBoost?: boolean;
   preHook?: Hook;
-  postHook?: Omit<Hook, "fundAmount" | "fundToken">;
+  postHook?: Omit<Hook, "fundAmount" | "fundToken"> & PostHookIntent;
   receiveGasOnDestination?: boolean;
   fallbackAddresses?: FallbackAddress[];
   bypassGuardrails?: boolean;
@@ -299,6 +299,17 @@ export interface Hook {
   description: string;
   logoURI: string;
   provider: string;
+}
+
+/**
+ * Destination-intent hints for a post-hook, reserved for CCTP V2 custom post-hooks. Not read by
+ * any route today.
+ * - `toAmountMin` — the output floor in `toToken` units.
+ * - `toAmount` — the payout cap in `toToken` units; `"0"` / omitted means uncapped (pass-through).
+ */
+export interface PostHookIntent {
+  toAmountMin?: string;
+  toAmount?: string;
 }
 
 export interface FallbackAddress {
