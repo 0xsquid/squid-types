@@ -1,5 +1,7 @@
 import { Token } from "../tokens";
 
+export * from "./lines";
+
 export enum FeeType {
   AXELAR_FEE = "Axelar fee",
   GAS_RECEIVER_FEE = "Gas receiver fee",
@@ -29,7 +31,6 @@ export type FeeCost = {
   amountUsd: string;
   logoURI?: string;
   data?: Record<string, any>;
-  receiver?: string;
 };
 
 export type GasCost = {
