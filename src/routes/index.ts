@@ -1,6 +1,6 @@
 import { ChainData, ChainType } from "../chains";
 import { Dex, DexName } from "../dexes";
-import { FeeCost, GasCost } from "../fees";
+import { FeeCost, GasCost, RequestFee } from "../fees";
 import { QuoteAction } from "../quote";
 import { ChainCall, SquidData } from "../squid";
 import { Token, Volatility } from "../tokens";
@@ -36,6 +36,7 @@ export interface RouteRequest {
     jitoTipFeeInLamports?: string;
   };
   overrideGasRefundAddress?: string;
+  fees?: RequestFee[];
 }
 
 export interface RouteRequestPopulated {
@@ -58,6 +59,7 @@ export interface RouteRequestPopulated {
     jitoTipFeeInLamports?: string;
   };
   overrideGasRefundAddress?: string;
+  fees?: RequestFee[];
 }
 
 export interface Estimate extends Omit<Route, "actions"> {
