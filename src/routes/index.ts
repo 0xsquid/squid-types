@@ -195,7 +195,7 @@ export interface FillerAddresses {
 }
 
 export interface LiquidityProviderDetails {
-  liquidityProvider: string;
+  liquidityProvider?: string;
   target: string;
   provider: string;
   type: BridgeType;
