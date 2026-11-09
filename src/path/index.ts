@@ -96,6 +96,9 @@ export enum PathFeature {
   includeCoralV2PostHooks = "6",
   isExactOutput = "7",
   includeRelayPaths = "8",
+  // CoralV2 Solana Jupiter hooks (ISS-2430): separate from 5/6 so integrators are gated per chain type
+  includeCoralV2SolanaPreHooks = "9",
+  includeCoralV2SolanaPostHooks = "10",
   // Add more features as needed
 }
 
