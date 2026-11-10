@@ -122,6 +122,8 @@ export enum DexName {
   ZYBERSWAP_V2 = "Zyberswap V2",
   ZYBERSWAP_V3 = "Zyberswap V3",
   TEMPO_STABLECOIN = "Tempo Stablecoin",
+  // Solana
+  JUPITER = "Jupiter",
 }
 
 // identifiers dex adapters
@@ -154,6 +156,8 @@ export enum DexType {
   // COSMOS
   OSMOSIS = "osmosis",
   ASTROPORT = "astroport",
+  // Solana
+  JUPITER = "jupiter",
 
   // Tempo
   TEMPO_STABLECOIN = "tempo-stablecoin",
