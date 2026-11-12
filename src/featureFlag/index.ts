@@ -58,6 +58,7 @@ export enum FeatureFlagType {
   Relay = "relay",
   CctpV2 = "cctpV2",
   CctpV2PostHooks = "cctpV2PostHooks",
+  XrplSingleChainSwaps = "xrplSingleChainSwaps",
 }
 
 export interface FeatureFlag {
