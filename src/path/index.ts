@@ -96,7 +96,10 @@ export enum PathFeature {
   includeCoralV2PostHooks = "6",
   isExactOutput = "7",
   includeRelayPaths = "8",
-  // XRPL native-DEX single-chain swaps (ISS-2402); "9"/"10" are taken by ISS-2430 Solana hooks
+  // CoralV2 Solana Jupiter hooks (ISS-2430): separate from 5/6 so integrators are gated per chain type
+  includeCoralV2SolanaPreHooks = "9",
+  includeCoralV2SolanaPostHooks = "10",
+  // XRPL native-DEX single-chain swaps (ISS-2402)
   includeXrplSingleChainSwaps = "11",
   // Add more features as needed
 }

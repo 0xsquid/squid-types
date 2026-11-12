@@ -23,10 +23,22 @@ export enum RequestFeeLevel {
   INTEGRATOR = "integrator",
 }
 
+export type FeeBeneficiary = {
+  name: string;
+  wallet?: { evmAddress: string };
+  bps: number;
+};
+
+export type FeeBeneficiaryRow = {
+  beneficiaryId: string;
+  bps: number;
+};
+
 export type RequestFee = {
   level: RequestFeeLevel | `${RequestFeeLevel}`;
   flatUsd?: number;
   bps?: number;
+  beneficiaries?: FeeBeneficiaryRow[];
 };
 
 export type FeeLine = {
@@ -39,4 +51,6 @@ export type FeeLine = {
   splitBps?: number | null;
   amount: string;
   amountUsd: string;
+  beneficiaryId?: string;
+  beneficiary?: string;
 };

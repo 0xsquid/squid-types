@@ -122,6 +122,8 @@ export enum DexName {
   ZYBERSWAP_V2 = "Zyberswap V2",
   ZYBERSWAP_V3 = "Zyberswap V3",
   TEMPO_STABLECOIN = "Tempo Stablecoin",
+  // Solana
+  JUPITER = "Jupiter",
   // XRPL
   XRPL_DEX = "XRPL DEX",
 }
@@ -156,6 +158,8 @@ export enum DexType {
   // COSMOS
   OSMOSIS = "osmosis",
   ASTROPORT = "astroport",
+  // Solana
+  JUPITER = "jupiter",
   // XRPL (native order books + AMMs, routed by ripple_path_find)
   XRPL_DEX = "xrpl-dex",
 
