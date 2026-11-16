@@ -101,6 +101,9 @@ export enum PathFeature {
   includeCoralV2SolanaPostHooks = "10",
   // XRPL native-DEX single-chain swaps (ISS-2402)
   includeXrplSingleChainSwaps = "11",
+  // CoralV2 XRPL native-DEX hooks (ISS-2471): gated per chain type like the Solana ones
+  includeCoralV2XrplPreHooks = "12",
+  includeCoralV2XrplPostHooks = "13",
   // Add more features as needed
 }
 
