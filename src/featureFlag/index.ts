@@ -59,6 +59,7 @@ export enum FeatureFlagType {
   CctpV2 = "cctpV2",
   CctpV2PostHooks = "cctpV2PostHooks",
   XrplSingleChainSwaps = "xrplSingleChainSwaps",
+  StellarSingleChainSwaps = "stellarSingleChainSwaps",
 }
 
 export interface FeatureFlag {
