@@ -11,6 +11,8 @@ export enum FeeComponent {
   TIER = "TIER",
   PARTNER = "PARTNER",
   SPLIT = "SPLIT",
+  /** Relayer execution gas prepaid inside a Squid fee; pass-through, excluded from revenue reports. */
+  EXECUTION = "EXECUTION",
 }
 
 export enum FeeSource {
