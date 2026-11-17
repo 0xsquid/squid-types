@@ -11,7 +11,7 @@ export enum FeeComponent {
   TIER = "TIER",
   PARTNER = "PARTNER",
   SPLIT = "SPLIT",
-  /** Relayer execution gas prepaid inside a Squid fee; pass-through, excluded from revenue reports. */
+  /** Relayer gas margin on hooked CCTP V2, prepaid inside the Squid fee. Pass-through cost, not revenue: exclude when summing Squid fee lines. Not the CoralV2 EXECUTION_FEE. */
   EXECUTION = "EXECUTION",
 }
 
