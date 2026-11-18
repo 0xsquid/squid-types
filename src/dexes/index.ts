@@ -126,6 +126,8 @@ export enum DexName {
   JUPITER = "Jupiter",
   // XRPL
   XRPL_DEX = "XRPL DEX",
+  // Stellar
+  STELLAR_DEX = "Stellar DEX",
 }
 
 // identifiers dex adapters
@@ -162,6 +164,8 @@ export enum DexType {
   JUPITER = "jupiter",
   // XRPL (native order books + AMMs, routed by ripple_path_find)
   XRPL_DEX = "xrpl-dex",
+  // Stellar (native SDEX order books + liquidity pools, routed by Horizon path finding)
+  STELLAR_DEX = "stellar-dex",
 
   // Tempo
   TEMPO_STABLECOIN = "tempo-stablecoin",
